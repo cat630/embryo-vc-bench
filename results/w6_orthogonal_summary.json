@@ -1,0 +1,38 @@
+{
+  "schema_version": "w6-orthogonal-v1",
+  "generated_at": "2026-11-18T08:03:21+00:00",
+  "work_package": "W6 orthogonal validation",
+  "registration": "OSF 8tzrq (10.17605/OSF.IO/8TZRQ)",
+  "analysis": "W6 orthogonal validation - consolidated",
+  "compliance_boundary": {
+    "no_model_loaded": true,
+    "no_new_model_score": true,
+    "no_new_inferential_test": true,
+    "no_new_p_value": true,
+    "no_preregistered_criterion_changed": true,
+    "h2_adjudication_reopened": false,
+    "third_osf_update_required": false,
+    "note": "Descriptive re-stratification of the already-released preregistered score table and audits of existing artefacts only. Registered dataset/model sets, metrics, thresholds, folds and seeds are unchanged."
+  },
+  "components": {
+    "atlas": "COMPUTED - descriptive cross-atlas replication evidence",
+    "nulls": "COMPUTED - null and dissociation audit, no new test",
+    "wording": "COMPUTED - PASS",
+    "table3": {
+      "output": "w6_validation_table3.md",
+      "sha256": "c04d1c1447d806f3961358227567d1d6074b3f0aa1669c1e009bf4c907b9fc89",
+      "lines": 13
+    }
+  },
+  "outputs": [
+    "results/w6_atlas_replication.json",
+    "results/w6_t2_by_heldout_atlas.csv",
+    "results/w6_null_audit.json",
+    "results/w6_wording_audit.json",
+    "results/w6_validation_table3.md",
+    "results/w6_ceiling.json",
+    "results/w6_ceiling_out/agg_ceiling_results.csv",
+    "results/w6_ceiling_out/ceiling_results.csv"
+  ],
+  "status": "W6 COMPUTED - descriptive evidence only"
+}

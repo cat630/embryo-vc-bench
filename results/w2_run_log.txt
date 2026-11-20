@@ -1,0 +1,7 @@
+command: python w2_qc.py --max-lines 20000
+timestamp_utc: 2026-11-17T15:50:45+00:00
+python: 3.13.14
+platform: Windows-11-10.0.26200-SP0
+seed: 0 (no stochastic step)
+manifest: data_manifest.csv
+files_audited: 23

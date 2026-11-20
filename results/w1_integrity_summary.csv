@@ -1,0 +1,28 @@
+entry_id,licence_status,format,sha256_ok,content_ok,verdict,detail,size_bytes,local_path
+GEO_GSE36552_SOFT,VERIFIED_POLICY,gzip,True,True,PASS,"gzip CRC OK; 405,831 uncompressed bytes",10868,data/GEO_GSE36552_SOFT__GSE36552_family.soft.gz
+GEO_GSE66507_SOFT,VERIFIED_POLICY,gzip,True,True,PASS,"gzip CRC OK; 214,211 uncompressed bytes",7134,data/GEO_GSE66507_SOFT__GSE66507_family.soft.gz
+GEO_GSE44183_SOFT,VERIFIED_POLICY,gzip,True,True,PASS,"gzip CRC OK; 124,581 uncompressed bytes",5209,data/GEO_GSE44183_SOFT__GSE44183_family.soft.gz
+GEO_GSE136447_SOFT,VERIFIED_POLICY,gzip,True,True,PASS,"gzip CRC OK; 3,565,291 uncompressed bytes",41831,data/GEO_GSE136447_SOFT__GSE136447_family.soft.gz
+GEO_GSE109555_SOFT,VERIFIED_POLICY,gzip,True,True,PASS,"gzip CRC OK; 642,648 uncompressed bytes",13566,data/GEO_GSE109555_SOFT__GSE109555_family.soft.gz
+GEO_GSE150578_SOFT,VERIFIED_POLICY,gzip,True,True,PASS,"gzip CRC OK; 39,691 uncompressed bytes",3966,data/GEO_GSE150578_SOFT__GSE150578_family.soft.gz
+BS_E-MTAB-3929_record,VERIFIED_POLICY,unknown,True,True,PASS,"first 65,536 bytes readable as text",1533339,data/BS_E-MTAB-3929_record__E-MTAB-3929
+BS_E-MTAB-8060_record,VERIFIED_POLICY,unknown,True,True,PASS,"first 14,646 bytes readable as text",14646,data/BS_E-MTAB-8060_record__E-MTAB-8060
+BS_E-MTAB-9388_record,VERIFIED_POLICY,unknown,True,True,PASS,"first 59,681 bytes readable as text",59681,data/BS_E-MTAB-9388_record__E-MTAB-9388
+ENA_PRJEB30442_record,VERIFIED_POLICY,unknown,True,True,PASS,"first 3,308 bytes readable as text",3308,data/ENA_PRJEB30442_record__PRJEB30442
+BS_E-MTAB-3929_counts,VERIFIED_POLICY,unknown,True,True,PASS,"first 65,536 bytes readable as text",100241457,data/BS_E-MTAB-3929_counts__counts.txt
+BS_E-MTAB-3929_ercc_counts,VERIFIED_POLICY,unknown,True,True,PASS,"first 65,536 bytes readable as text",393692,data/BS_E-MTAB-3929_ercc_counts__ercc.counts.txt
+BS_E-MTAB-3929_sdrf,VERIFIED_POLICY,unknown,True,True,PASS,"first 65,536 bytes readable as text",1446272,data/BS_E-MTAB-3929_sdrf__E-MTAB-3929.sdrf.txt
+BS_E-MTAB-3929_idf,VERIFIED_POLICY,unknown,True,True,PASS,"first 4,716 bytes readable as text",4716,data/BS_E-MTAB-3929_idf__E-MTAB-3929.idf.txt
+GEO_GSE44183_RAW,VERIFIED_POLICY,tar,True,True,PASS,"1 members, 48,654,870 bytes uncompressed",48660480,data/GEO_GSE44183_RAW__GSE44183_RAW.tar
+GEO_GSE66507_human_blastocyst_rnaseq_counts,VERIFIED_POLICY,gzip,True,True,PASS,"gzip CRC OK; 5,411,638 uncompressed bytes",953644,data/GEO_GSE66507_human_blastocyst_rnaseq_counts__GSE66507_human_blastocyst_rnaseq_counts.txt.gz
+GEO_GSE136447_555-samples-fpkm,VERIFIED_POLICY,gzip,True,True,PASS,"gzip CRC OK; 229,444,437 uncompressed bytes",40133388,data/GEO_GSE136447_555-samples-fpkm__GSE136447_555-samples-fpkm.txt.gz
+GEO_GSE136447_555sample_gene_count_matrix,VERIFIED_POLICY,gzip,True,True,PASS,"gzip CRC OK; 86,144,486 uncompressed bytes",15616462,data/GEO_GSE136447_555sample_gene_count_matrix__GSE136447_555sample_gene_count_matrix.txt.gz
+GEO_GSE109555_RAW,VERIFIED_POLICY,tar,True,True,PASS,"125 members, 82,120 bytes uncompressed",194560,data/GEO_GSE109555_RAW__GSE109555_RAW.tar
+GEO_GSE150578_RAW,VERIFIED_POLICY,tar,True,True,PASS,"9 members, 119,887,147 bytes uncompressed",119900160,data/GEO_GSE150578_RAW__GSE150578_RAW.tar
+ARC_gene_names,VERIFIED_CC0,unknown,True,True,PASS,"first 65,536 bytes readable as text",116023,data/ARC_gene_names__gene_names.csv
+ARC_pert_counts_train,VERIFIED_CC0,unknown,True,True,PASS,"first 2,824 bytes readable as text",2824,data/ARC_pert_counts_train__pert_counts_Training.csv
+ARC_pert_counts_validation,VERIFIED_CC0,unknown,True,True,PASS,first 978 bytes readable as text,978,data/ARC_pert_counts_validation__pert_counts_Validation.csv
+ARC_pert_counts_test,VERIFIED_CC0,unknown,True,True,PASS,"first 1,894 bytes readable as text",1894,data/ARC_pert_counts_test__pert_counts_Test.csv
+VCC_validation_h5ad_GCS,VERIFIED_CC0,h5ad,True,True,PASS,"shape=(98927, 18080), root_keys=['X', 'layers', 'obs', 'obsm', 'obsp', 'uns'], obs_cols=['target_gene', 'guide_id', 'batch']",6928967541,data/VCC_validation_h5ad_GCS__adata_Validation.h5ad
+VCC_competition_train_DE_parquet,VERIFIED_CC0,parquet,True,True,PASS,"1,566,978 rows x 10 cols, 13 row group(s)",58843299,data/VCC_competition_train_DE_parquet__competition_train.parquet
+VCC_competition_val_DE_parquet,VERIFIED_CC0,parquet,True,True,PASS,"472,187 rows x 10 cols, 4 row group(s)",17666177,data/VCC_competition_val_DE_parquet__competition_val.parquet

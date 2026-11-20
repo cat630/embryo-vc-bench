@@ -1,0 +1,4 @@
+framework_metric,official_counterpart,official_metric_type,availability,caveat
+MAE,mae / mae_delta,ANNDATA_PAIR,UNAVAILABLE,Requires a valid single-cell h5ad; quarantined validation h5ad blocks it.
+DES,overlap_at_N / precision_at_N / de_sig_genes_recall,DE,AVAILABLE,"Both measure DE-gene recovery, but our DES is top-k by |LFC| without FDR filtering; official overlap ranks post-FDR significant genes. Not interchangeable."
+PDS,discrimination_score_cosine,ANNDATA_PAIR,UNAVAILABLE,"Official implementation operates on cell-level profiles, not DE tables."

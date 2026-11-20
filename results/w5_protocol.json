@@ -1,0 +1,59 @@
+{
+  "version": "w5-adapter-protocol-2",
+  "revision_history": [
+    {
+      "version": "w5-adapter-protocol-1",
+      "status": "SUPERSEDED before any model score existed",
+      "delta": "set the target gene's binned value to 0",
+      "reason_rejected": "a zero/low-expressed target outside top-L produced an identical input and an identically zero delta for both models on real E-MTAB-3929 cells"
+    },
+    {
+      "version": "w5-adapter-protocol-2",
+      "status": "ACTIVE",
+      "delta": "target-gene token ablation (<pad> / <mask>) with forced inclusion",
+      "rationale": "matches the preregistered T2 wording 'masking a target gene'; always well-defined; no expression imputed"
+    }
+  ],
+  "models": [
+    "scGPT",
+    "Geneformer"
+  ],
+  "zero_shot": true,
+  "gene_axis": "17,555-symbol intersection of Arc gene_names / scGPT vocab / Geneformer V1 tokens",
+  "scgpt": {
+    "checkpoint": "models/scGPT/best_model.pt",
+    "checkpoint_revision": "perturblab/scgpt-human@571a0445d68fa48381f863ff75dd4f6d0eae3dfc",
+    "normalization": "library size -> 1e4, log1p",
+    "binning": "per-cell quantile bins 1..51 for nonzero values, zero -> 0",
+    "sequence": "deterministic top-1200 genes by log-normalized value; no CLS token",
+    "pooling": "avg-pool over non-pad tokens (checkpoint trained with no_cls=True)",
+    "embedding_dim": 512,
+    "attention": "checkpoint trained with fast_transformer=True (Wqkv layout); loaded on CPU via _PureTorchFlashMHA, an exact-parameter-name stand-in using torch.nn.Linear + scaled_dot_product_attention. The compiled flash-attn package is NOT used.",
+    "checkpoint_load_disclosure": "10 cls_decoder tensors are absent and randomly initialised but never called; flag_encoder.weight is unused; all 144 transformer tensors and the encoder/decoder weights load exactly",
+    "delta": "target gene TOKEN ABLATION -> <pad> on the FIXED sequence; mlm_output(pert) - mlm_output(base); cell-mean; scatter to gene axis",
+    "force_target_into_sequence": "targets outside a cell's top-L replace the lowest-expression token, keeping their true binned value; no expression is imputed"
+  },
+  "geneformer": {
+    "checkpoint": "models/Geneformer/Geneformer-V1-10M/model.safetensors",
+    "checkpoint_revision": "ctheodoris/Geneformer@1f7fbae4e469a5f4f1af8c111a529cfe1b3829f5",
+    "dictionaries": "Genecorpus-30M: token_dictionary, gene_median_dictionary, gene_name_id_dict",
+    "normalization": "raw counts / per-gene Genecorpus-30M median",
+    "sequence": "rank-descending within cell, top-2048 Ensembl tokens, pad -> 0",
+    "pooling": "mean of last hidden state over non-pad tokens",
+    "embedding_dim": 256,
+    "delta": "target gene TOKEN ABLATION -> <mask>(1); cell-embedding shift (cell-mean) projected onto the model's gene-token embedding matrix",
+    "force_target_into_sequence": "targets outside a cell's top-2048 replace the lowest-ranked token and are included in attention; no expression is imputed"
+  },
+  "delta_scale_warning": "Neither adapter delta is on a log2FC scale and the two are not on a common scale with each other or with the CRISPRi ground truth. DES/PDS are scale-free; MAE requires per-perturbation z-scoring and must be labelled as such.",
+  "preregistration_note": "Implements the preregistered ModelAdapter interface (embed, predict_delta) for the two frozen models. No hypothesis, metric, fold, seed, dataset inclusion rule or falsification threshold is changed. The concrete tokenization/pooling/delta construction are implementation details of the adapter and are disclosed here; whether a timestamped registration amendment is required is a decision for the author/editor, not for this code.",
+  "generated_at": "2026-11-18T03:40:08Z",
+  "adapter_verification": {
+    "result_file": "results/w5_adapter_test.json",
+    "all_pass": true,
+    "models_evaluated": [
+      "Geneformer",
+      "scGPT"
+    ],
+    "note": "engineering verification only; no preregistered score"
+  }
+}

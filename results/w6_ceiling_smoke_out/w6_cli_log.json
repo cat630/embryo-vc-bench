@@ -1,0 +1,7 @@
+{
+  "command": "D:\\WB\\2026-11-15-06-58-47\\embryo-vc-bench\\.venv\\Scripts\\cell-eval.exe run -ar D:\\WB\\2026-11-15-06-58-47\\embryo-vc-bench\\data\\w6_ceiling_smoke_subset.h5ad --ceiling --ceiling-seed 0 --profile de --num-threads 2 --allow-discrete -o D:\\WB\\2026-11-15-06-58-47\\embryo-vc-bench\\results\\w6_ceiling_smoke_out",
+  "returncode": 0,
+  "seconds": 9.1,
+  "stdout_tail": "",
+  "stderr_tail": "Output directory D:\\WB\\2026-11-15-06-58-47\\embryo-vc-bench\\results\\w6_ceiling_smoke_out already exists, potential overwrite occurring\n\nRunning parallel differential expression (against reference):   0%|          | 0/4 [00:00<?, ?it/s]\nRunning parallel differential expression (against reference):  25%|██▌       | 1/4 [00:03<00:09,  3.31s/it]\nRunning parallel differential expression (against reference): 100%|██████████| 4/4 [00:03<00:00,  1.18it/s]\n\nRunning parallel differential expression (against reference):   0%|          | 0/4 [00:00<?, ?it/s]\nRunning parallel differential expression (against reference): 100%|██████████| 4/4 [00:00<00:00, 41.50it/s]\nIdentified 4781 infinite log2 fold change values (real)\nIdentified 4968 infinite log2 fold change values (pred)\n"
+}

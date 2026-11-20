@@ -1,0 +1,4 @@
+perturbation,overlap_at_N,overlap_at_50,overlap_at_100,overlap_at_200,overlap_at_500,precision_at_N,precision_at_50,precision_at_100,precision_at_200,precision_at_500,de_spearman_sig,de_direction_match,de_spearman_lfc_sig,de_sig_genes_recall,de_nsig_counts_real,de_nsig_counts_pred,pr_auc,roc_auc
+ACLY,0.14285714285714285,0.14285714285714285,0.14285714285714285,0.14285714285714285,0.14285714285714285,1.0,1.0,1.0,1.0,1.0,NaN,0.8571428571428571,0.42857142857142855,0.14285714285714285,7.0,1.0,0.1523311821069423,0.7738497047687553
+ANXA6,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,NaN,1.0,NaN,1.0,1.0,1.0,1.0,1.0
+ARPC2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,NaN,,,,0.0,0.0,NaN,NaN

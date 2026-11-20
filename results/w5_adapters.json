@@ -1,0 +1,98 @@
+{
+  "gene_space": {
+    "n_genes": 17555,
+    "fingerprint": "d4a3402091e00bf7ff7b0035913ecc7949ae5bf270e25221c112735234266e7c",
+    "first_genes": [
+      "A1CF",
+      "A2M",
+      "A2ML1",
+      "A3GALT2",
+      "A4GALT"
+    ],
+    "scgpt_tokens_resolved": 17555,
+    "geneformer_tokens_resolved": 17555,
+    "sources": {
+      "arc_gene_names": "ARC_gene_names__gene_names.csv",
+      "n_arc": 18080,
+      "scgpt_vocab": "vocab.json",
+      "n_scgpt_vocab": 60697,
+      "geneformer_token_dict": "token_dictionary_gc30M.pkl",
+      "n_geneformer_tokens": 25426,
+      "geneformer_name_map": "gene_name_id_dict_gc30M.pkl"
+    }
+  },
+  "protocol": {
+    "version": "w5-adapter-protocol-1",
+    "models": [
+      "scGPT",
+      "Geneformer"
+    ],
+    "zero_shot": true,
+    "gene_axis": "17,555-symbol intersection of Arc gene_names / scGPT vocab / Geneformer V1 tokens",
+    "scgpt": {
+      "checkpoint": "models/scGPT/best_model.pt",
+      "checkpoint_revision": "perturblab/scgpt-human@571a0445d68fa48381f863ff75dd4f6d0eae3dfc",
+      "normalization": "library size -> 1e4, log1p",
+      "binning": "per-cell quantile bins 1..51 for nonzero values, zero -> 0",
+      "sequence": "deterministic top-1200 genes by log-normalized value; no CLS token",
+      "pooling": "avg-pool over non-pad tokens (checkpoint trained with no_cls=True)",
+      "embedding_dim": 512,
+      "attention": "checkpoint trained with fast_transformer=True (Wqkv layout); loaded on CPU via _PureTorchFlashMHA, an exact-parameter-name stand-in using torch.nn.Linear + scaled_dot_product_attention. The compiled flash-attn package is NOT used.",
+      "checkpoint_load_disclosure": "10 cls_decoder tensors are absent and randomly initialised but never called; flag_encoder.weight is unused; all 144 transformer tensors and the encoder/decoder weights load exactly",
+      "delta": "value(target)=0 on the FIXED sequence; mlm_output(pert) - mlm_output(base); cell-mean; scatter to gene axis"
+    },
+    "geneformer": {
+      "checkpoint": "models/Geneformer/Geneformer-V1-10M/model.safetensors",
+      "checkpoint_revision": "ctheodoris/Geneformer@1f7fbae4e469a5f4f1af8c111a529cfe1b3829f5",
+      "dictionaries": "Genecorpus-30M: token_dictionary, gene_median_dictionary, gene_name_id_dict",
+      "normalization": "raw counts / per-gene Genecorpus-30M median",
+      "sequence": "rank-descending within cell, top-2048 Ensembl tokens, pad -> 0",
+      "pooling": "mean of last hidden state over non-pad tokens",
+      "embedding_dim": 256,
+      "delta": "target token -> <mask>(1); cell-embedding shift (cell-mean) projected onto the model's gene-token embedding matrix"
+    },
+    "delta_scale_warning": "Neither adapter delta is on a log2FC scale and the two are not on a common scale with each other or with the CRISPRi ground truth. DES/PDS are scale-free; MAE requires per-perturbation z-scoring and must be labelled as such.",
+    "preregistration_note": "Implements the preregistered ModelAdapter interface (embed, predict_delta) for the two frozen models. No hypothesis, metric, fold, seed, dataset inclusion rule or falsification threshold is changed. The concrete tokenization/pooling/delta construction are implementation details of the adapter and are disclosed here; whether a timestamped registration amendment is required is a decision for the author/editor, not for this code."
+  },
+  "adapters": {
+    "scGPT": {
+      "name": "scGPT",
+      "embedding_dim": 512,
+      "protocol_version": "w5-adapter-protocol-1",
+      "load_seconds": 0.456,
+      "checkpoint_tensors": 163,
+      "loaded_tensors": 162,
+      "missing_keys": [
+        "cls_decoder._decoder.0.weight",
+        "cls_decoder._decoder.0.bias",
+        "cls_decoder._decoder.2.weight",
+        "cls_decoder._decoder.2.bias",
+        "cls_decoder._decoder.3.weight",
+        "cls_decoder._decoder.3.bias",
+        "cls_decoder._decoder.5.weight",
+        "cls_decoder._decoder.5.bias",
+        "cls_decoder.out_layer.weight",
+        "cls_decoder.out_layer.bias"
+      ],
+      "unexpected_keys": [
+        "flag_encoder.weight"
+      ],
+      "disclosure": "cls_decoder (10 tensors) is randomly initialised but never called; flag_encoder.weight is unused; all encoder/transformer/decoder tensors are loaded exactly",
+      "checkpoint_sha256": "6cb5d451ab5c4b33eb673adbe4fddc61d2389df1b89b7651a9fe2e557572b922",
+      "vocab_sha256": "acca93d114ca62c3f0f50debbd23e8c87f0714f4737764454f6b2b13f2e8580f"
+    },
+    "Geneformer": {
+      "name": "Geneformer",
+      "embedding_dim": 256,
+      "protocol_version": "w5-adapter-protocol-1",
+      "load_seconds": 1.231,
+      "checkpoint": "models\\Geneformer\\Geneformer-V1-10M",
+      "n_tokens": 25426,
+      "gene_embedding_shape": [
+        17555,
+        256
+      ],
+      "checkpoint_sha256": "a5e33a757431643b3697de7ef6127950cdc49e06e58d4266b3a3ab191b683f14"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": "w7-release-manifest-v1",
+  "record_date": "2026-11-18",
+  "note": "This file does not contain its own hash (self-reference loop). Generated PNGs are excluded.",
+  "n_files": 20,
+  "files": {
+    "CITATION.cff": {
+      "sha256": "6c924f7155cbda4ff7dbef6971c583a23b31db8d21e1e360ef94729f6e8c00e6",
+      "size_bytes": 2103
+    },
+    "environment/Dockerfile": {
+      "sha256": "5aa7a5b2027ccd430f072d53782897f0a27c27182a63698eb62d4e492aa70e6b",
+      "size_bytes": 2415
+    },
+    "environment/environment.yml": {
+      "sha256": "a8c8d9626e883984966ea92781a11eec2b539db6fee97c47ac2a493be0de1f7d",
+      "size_bytes": 3110
+    },
+    "environment/platform.json": {
+      "sha256": "41a725cde28a04cddbb918492743f999ed6c53196f1b3d4788078ddb1b242c69",
+      "size_bytes": 1662
+    },
+    "environment/requirements-main.lock.txt": {
+      "sha256": "684e85abc987d2998e7548eeb29f45e8f06484b9c3c53e91225c7ee5aefe6497",
+      "size_bytes": 2240
+    },
+    "environment/requirements-models.lock.txt": {
+      "sha256": "d4de15c2e1bb15c5598003792ae26d01dbf1f963ebba855f2ec8205b04ae7699",
+      "size_bytes": 2106
+    },
+    "FAIR_selfcheck.md": {
+      "sha256": "229a290e0efa5b39df123301fa7a0fdda3d3490d5dfb883eae4fb2d9cb57d9fb",
+      "size_bytes": 5153
+    },
+    "figure_source_data/ceiling_de_metrics.csv": {
+      "sha256": "fa5edcb15f180701f22de6322d20e9a0f413c0d0119a7fc9ceeaa9c5a7f0ae62",
+      "size_bytes": 582
+    },
+    "figure_source_data/fig4_fold_level_scores.csv": {
+      "sha256": "397ce31864631c1868a1dfb2ed7421578fb1bd6558c47b81e1b3bd8dbfbf2ed9",
+      "size_bytes": 14240
+    },
+    "figure_source_data/fig4_paired_contrasts.csv": {
+      "sha256": "39a556f800d8e15be5f31b06fef23867c116146503a0920ac38f4e6f9c09767d",
+      "size_bytes": 2758
+    },
+    "figure_source_data/fig4_t2_t3_means.csv": {
+      "sha256": "c218e33b40146d785111ddaee3657fb9ed67a75cd39de6f1d9b8e209f4c83a1b",
+      "size_bytes": 765
+    },
+    "figure_source_data/fig_t2_by_heldout_atlas.csv": {
+      "sha256": "e2536b90774787fed02822a255360f3cbe2754190a9123fa710a084b8b96d5dd",
+      "size_bytes": 1497
+    },
+    "figure_source_data/SOURCE_INDEX.md": {
+      "sha256": "5d16a583660bc9627e9ea08b55fe5dda38b3c785ed3751df72bf2f54875f64db",
+      "size_bytes": 3640
+    },
+    "figure_source_data/table1_datasets.csv": {
+      "sha256": "1853c8ec2666e9cff791d4b429b634dfa045adbee8f27353f7b5905cd12b2249",
+      "size_bytes": 27937
+    },
+    "figure_source_data/table3_validation_layers.csv": {
+      "sha256": "56b5c89a89a562c507beed458cde65b875b1c0161a4e21301c5921cf6026e1e8",
+      "size_bytes": 1055
+    },
+    "LICENSE.md": {
+      "sha256": "7f766e3dba4104758e885e13f0eaf7b03ebe56b5f40bfe6c319ccd0362640043",
+      "size_bytes": 2824
+    },
+    "metadata.jsonld": {
+      "sha256": "6aa2b4f7c27d4f3e7002ca4b456c2a1ca13f944f68c8d4a69a16ec3e563ff34f",
+      "size_bytes": 4903
+    },
+    "README.md": {
+      "sha256": "a7f39870d7cc55c9af0ad0bb3cb9a6903bc7a442d31b027b2fe490cdcf515fbd",
+      "size_bytes": 6214
+    },
+    "reproduce.ipynb": {
+      "sha256": "41770a647806d0dcbd834e53858b930562e7ef4724f3be364a533404e17712d0",
+      "size_bytes": 5373
+    },
+    "reproduce.py": {
+      "sha256": "e3d39f43ffdd660396b35b3424f7b4efd855d3df2235168316ad40e64fd479d7",
+      "size_bytes": 4435
+    }
+  },
+  "pending_identifiers": [
+    "[[PENDING_GITHUB_URL]]",
+    "[[PENDING_ZENODO_DOI]]",
+    "[[PENDING_RELEASE_DATE]]",
+    "[[PENDING_CODE_LICENSE]]"
+  ],
+  "refresh_command": "python w7_release.py --refresh"
+}

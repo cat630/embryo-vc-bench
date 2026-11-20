@@ -1,0 +1,76 @@
+{
+  "status": "SYNTHETIC SELF-TEST - ALGEBRA VERIFICATION ONLY, NO REAL DATA, NO MODEL, NO RESULT",
+  "generated_at": "2026-11-18T04:48:58Z",
+  "checks": {
+    "surrogate_equivalence": true,
+    "permutation_equivalence": true,
+    "all_folds_leakage_free": true,
+    "n_folds": 15,
+    "n_distinct_test_atlases": 3,
+    "mandatory_baselines_present": true,
+    "no_change_DES_is_zero": true,
+    "bh_values_in_unit_interval": true,
+    "bootstrap_ci_ordered": true
+  },
+  "all_pass": true,
+  "surrogate_detail": {
+    "all_pass": true,
+    "worst_max_abs_diff": 1.1102230246251565e-15,
+    "cases": [
+      {
+        "shape": [
+          30,
+          45
+        ],
+        "n_target": 4,
+        "max_abs_diff": 6.661338147750939e-16,
+        "equal": true
+      },
+      {
+        "shape": [
+          12,
+          60
+        ],
+        "n_target": 6,
+        "max_abs_diff": 1.1102230246251565e-15,
+        "equal": true
+      },
+      {
+        "shape": [
+          40,
+          25
+        ],
+        "n_target": 3,
+        "max_abs_diff": 5.551115123125783e-16,
+        "equal": true
+      }
+    ]
+  },
+  "permutation_detail": {
+    "all_pass": true,
+    "cases": [
+      {
+        "seed": 0,
+        "core_DES": 0.024390243902439025,
+        "fast_DES": 0.024390243902439025,
+        "core_PDS": 0.024390243902439025,
+        "fast_PDS": 0.024390243902439025
+      },
+      {
+        "seed": 3,
+        "core_DES": 0.024390243902439025,
+        "fast_DES": 0.024390243902439025,
+        "core_PDS": 0.024390243902439025,
+        "fast_PDS": 0.024390243902439025
+      },
+      {
+        "seed": 7,
+        "core_DES": 0.024390243902439025,
+        "fast_DES": 0.024390243902439025,
+        "core_PDS": 0.024390243902439025,
+        "fast_PDS": 0.024390243902439025
+      }
+    ],
+    "note": "PDS must use higher_is_better=True to match evaluate_one_fold"
+  }
+}

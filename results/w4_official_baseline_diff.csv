@@ -1,0 +1,11 @@
+metric,normalization,from_baseline
+de_direction_match,(user - base)/(1 - base),0.6127143080819448
+de_sig_genes_recall,(user - base)/(1 - base),0.4141327396666815
+overlap_at_100,(user - base)/(1 - base),0.14270864381520118
+overlap_at_50,(user - base)/(1 - base),0.13863636363636364
+overlap_at_N,(user - base)/(1 - base),0.22501593741447642
+pr_auc,(user - base)/(1 - base),0.028065308081941662
+precision_at_50,(user - base)/(1 - base),0.13909090909090907
+precision_at_N,(user - base)/(1 - base),0.21371186307326928
+roc_auc,(user - base)/(1 - base),0.05618358442615046
+avg_score,mean(clipped>=0),0.2189177396985487

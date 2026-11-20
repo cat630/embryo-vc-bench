@@ -1,0 +1,10 @@
+Loaded train DE (1566978, 10), val DE (472187, 10), gene universe 18080
+Aligned: 11557 shared features, 146 train / 44 val perturbations, shared targets=0, density train=0.9280 val=0.9284
+additive baseline NOT APPLICABLE: 0 combinatorial perturbations in the VCC 2025 DE tables (recorded, not imputed)
+FRAMEWORK no_change: MAE=0.096575 DES=0.000000 PDS=0.500000 | MAE 95% CI=(0.072233,0.123565) DES 95% CI=(0.000000,0.000000)
+FRAMEWORK train_mean: MAE=0.103321 DES=0.082955 PDS=0.500000 | MAE 95% CI=(0.080900,0.128108) DES 95% CI=(0.063636,0.103437)
+OFFICIAL no_change: 9/11 DE metrics returned finite means
+OFFICIAL train_mean: 11/11 DE metrics returned finite means
+cell-eval score official API FAILED: IndexError: arrays used as indices must be of integer (or boolean) type
+  -> equivalent formulas applied to 9 metrics (9 ONE-best / 0 ZERO-best); avg_score=0.2189177396985487
+W4 baseline calibration written -> results/

@@ -1,0 +1,133 @@
+{
+  "schema_version": "w7-release-v1",
+  "record_date": "2026-11-18",
+  "status": "W7 LOCAL ARTEFACTS COMPLETE; public identifiers PENDING",
+  "note": "NO timestamp and NO release-file hash in this record, so the manuscript [[R7]] citation stays stable when the author later fills GitHub URL / Zenodo DOI / licence.",
+  "hardware": {
+    "os": "Windows-11-10.0.26200-SP0",
+    "architecture": "AMD64",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "cpu_logical": 12,
+    "cpu_physical": 8,
+    "ram_total_gib": 15.7,
+    "ram_available_at_scoring": "~4.9 GB",
+    "gpu": "none used; all model inference was CPU-only",
+    "disk_free_at_decision_gb": 161
+  },
+  "software": {
+    "python": "3.13.14",
+    "main_environment_pinned_distributions": 110,
+    "model_environment_pinned_distributions": 102,
+    "key_pins": "scvi-tools 1.5.2, scanpy 1.13.0, anndata 0.13.4, cell-eval 0.8.2, torch 2.15.0+cpu, transformers 4.46.3, datasets 2.21.0, scgpt 0.2.4",
+    "two_environment_reason": "Installing model dependencies into the main environment downgrades scvi-tools; scgpt==0.2.4 is installed with --no-deps from the official PyPI index only."
+  },
+  "seeds_and_protocol": {
+    "model_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "permutation_B": 1000,
+    "bootstrap_B": 2000,
+    "bootstrap_rng_seed": 0,
+    "top_k": 20,
+    "multiple_testing": "Benjamini-Hochberg across 4 methods per block",
+    "gene_axis": 17555,
+    "t3_shared_feature_axis": 11502,
+    "adapter_protocol": "w5-adapter-protocol-2 (target-gene TOKEN ablation)",
+    "mandatory_baselines": [
+      "no_change",
+      "train_mean"
+    ],
+    "additive_baseline": "NOT APPLICABLE — no combinatorial perturbations in the VCC DE tables; never imputed"
+  },
+  "wall_clock": {
+    "preregistered_scoring_started_utc": "2026-11-18T05:23:34Z",
+    "preregistered_scoring_finished_utc": "2026-11-18T06:36:10Z",
+    "preregistered_scoring_minutes": 72.6,
+    "scoring_exit_code": 0,
+    "scoring_errors": 0,
+    "scGPT_engineering_verification_seconds": 274.86,
+    "Geneformer_engineering_verification_seconds": 136.12,
+    "w6_ceiling_subset_build_seconds": 30.6,
+    "w6_ceiling_cli_seconds": 28.0,
+    "w3_prototype_seconds": 1.66,
+    "note": "Engineering verification, W3 prototype and W4 baseline calibration are NOT model-performance timings."
+  },
+  "failures_and_omissions": [
+    "6.9 GB validation h5ad arrived as a zero-filled 44/826-chunk residual; W1b selective-resume repair restored 782 chunks and 27/27 content-integrity checks passed (98,927 cells x 18,080 genes).",
+    "cell-eval 0.8.2 score_agg_metrics raised IndexError on ONE-best metrics with empty float64 indices; worked around by an equivalent source-faithful recomputation (avg_score 0.218918), without patching site-packages.",
+    "W3 was a 500-cell / 2,000-gene / 5-epoch CPU feasibility prototype only; the shared latent time axis tau was NEVER fitted, so H1 macro-F1 label transfer and the whole H3 tau-distance correlation are unexecutable.",
+    "Only three licence-verified independent atlases were available (3 < 5 folds); per the registered rule H1 is demoted to exploratory.",
+    "Zero-shot adapter protocol v1 (zeroing expression values) produced identically zero deltas on real cells and was rejected BEFORE any model score; protocol v2 uses target-gene token ablation.",
+    "torchtext namespace stubs, a pure-PyTorch _PureTorchFlashMHA replacement for Wqkv, and a frozen Geneformer V1 rank-encoding dictionary were required because several C extensions do not build on Python 3.13.",
+    "Full-data --ceiling was not executable at ~4.9 GB available RAM; a deterministic seed-0 11,961-cell subsample was used and is reported as a subsample-depth bound only.",
+    "NO model was silently omitted: scGPT and Geneformer are the complete preregistered set; scFoundation, GEARS and CPA are non-preregistered future extensions.",
+    "13 UNVERIFIED-licence data rows were excluded (BLOCKED_LICENCE); 21 VERIFIED_POLICY rows await institutional confirmation before Table 1 / [[R1]] can be filled."
+  ],
+  "licence_audit": {
+    "data_manifest_rows": 42,
+    "verified_cc0": 8,
+    "verified_policy": 21,
+    "unverified_excluded": 13,
+    "model_manifest_rows": 37,
+    "model_verified_mit": 4,
+    "model_verified_apache2": 33,
+    "model_excluded_for_licence": 1,
+    "model_excluded_detail": "VirtualCell2025/scGPT_human mirror carried no licence declaration; frozen set uses perturblab/scgpt-human (MIT) and ctheodoris/Geneformer (Apache-2.0)."
+  },
+  "release": {
+    "n_manifest_files": 20,
+    "n_figure_source_data_files": 7,
+    "reproduce_entries": [
+      "release/reproduce.py",
+      "release/reproduce.ipynb"
+    ],
+    "metadata": "release/metadata.jsonld (schema.org SoftwareSourceCode + Dataset)",
+    "fair_selfcheck": "release/FAIR_selfcheck.md — PARTIAL; Findable/Accessible blocked on public identifiers"
+  },
+  "pending_author_actions": [
+    "Choose code licence (MIT / Apache-2.0 / CC0-1.0) and replace LICENSE.md.",
+    "Create public GitHub repository; fill [[PENDING_GITHUB_URL]].",
+    "Deposit tagged Zenodo release; fill [[PENDING_ZENODO_DOI]] and [[PENDING_RELEASE_DATE]].",
+    "Fill manuscript [[R9]]: repository/DOI/licence/OS/reproduction commands, CRediT, Funding, generative-AI disclosure, COI two-way choice.",
+    "Institutionally confirm the 21 VERIFIED_POLICY rows before filling [[R1]] / Table 1.",
+    "Verify every reference DOI via Crossref / Europe PMC.",
+    "Remove DECISION RECORD, H2 ADJUDICATION RECORD, appendices A/B and the Chinese COI note before submission.",
+    "Change w5_score_summary.json status from 'draft, not yet released' only on final author sign-off."
+  ],
+  "compliance": {
+    "no_model_loaded_in_w7": true,
+    "no_new_model_score": true,
+    "no_new_inferential_test": true,
+    "no_preregistered_criterion_changed": true,
+    "no_w6_generator_re_run": true,
+    "third_osf_update_required": false,
+    "manuscript_slots_filled_by_w7": [
+      "R7"
+    ],
+    "manuscript_slots_still_pending": [
+      "R1",
+      "R9"
+    ],
+    "manuscript_slots_permanent_placeholders": [
+      "R2",
+      "R3",
+      "R5"
+    ]
+  },
+  "source_evidence_sha256": {
+    "results/w5_scores.csv": "397ce31864631c1868a1dfb2ed7421578fb1bd6558c47b81e1b3bd8dbfbf2ed9",
+    "results/w5_score_summary.json": "253104d49fc0d58d1fec2298e81b397c38946b850efecf5e26b64896e921a913",
+    "results/w5_verify_real_adapters.json": "4fe3bf96e0d3fc4ffce9951b04d40a82e5ca0d02e970b31c7e107f3b757dd2c0",
+    "results/w5_scoring_plan.json": "f43d4435db9b26bccfbb5f794d58372067a83d0c796cd406bab6657e5d177d49",
+    "results/w5_amendment_decision.json": "41c090085309fa2f722acbff485a6b69dde07791c77879524483593eef586067",
+    "results/w6_atlas_replication.json": "214060d1bf8c986b0dda01d09c6458b35c8f5a5a5f90f606870224a8e424652e",
+    "results/w6_null_audit.json": "77eb2a16cdba670933b3fdcf2f774d738d210c6e04b450edaf4aae51d7bc5bb7",
+    "results/w6_wording_audit.json": "aa158ae103a563843adc3902fe6e12d987ba980230695b4ebe94ef270d2756a6",
+    "results/w6_ceiling.json": "477f106b70501da85b1b5963c741870c1c60a0dea5e1a208b748aeba4e49277b",
+    "results/w4_official_de_metrics.csv": "9317d185c390a1bbedbc65c7fe7c896b05040567892dd4544e19614d676be8c3"
+  }
+}

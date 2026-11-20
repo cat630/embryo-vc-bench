@@ -1,0 +1,389 @@
+{
+  "schema_version": "w4-baseline-calibration-v1",
+  "generated_at": "2026-11-17T22:09:38+00:00",
+  "analysis_status": "PREREGISTERED W4 BASELINE CALIBRATION - BASELINE RESULTS ONLY",
+  "preregistration": {
+    "url": "https://osf.io/8tzrq/overview",
+    "doi": "10.17605/OSF.IO/8TZRQ",
+    "registered_utc": "2026-11-17T10:15:47Z",
+    "model_set_update_utc": "2026-11-17T14:23:25Z"
+  },
+  "inputs": {
+    "train_de": {
+      "path": "data\\VCC_competition_train_DE_parquet__competition_train.parquet",
+      "sha256": "6a021f3014a7c94d47441b0cd99dcaa6fce99e044c6b4d65fa6cba8b9877b320",
+      "rows": 1566978
+    },
+    "val_de": {
+      "path": "data\\VCC_competition_val_DE_parquet__competition_val.parquet",
+      "sha256": "7d88608f3e38a29665764bda06dff947de1b2601f4b9a0f999d718e978ef33e1",
+      "rows": 472187
+    },
+    "gene_universe_rows": 18080,
+    "licence": "VERIFIED_CC0 (Arc Virtual Cell Atlas VCC 2025 CC0 1.0 dedication)"
+  },
+  "alignment": {
+    "shared_features": 11557,
+    "train_features": 12214,
+    "val_features": 11629,
+    "n_train_perturbations": 146,
+    "n_val_perturbations": 44,
+    "shared_targets": 0,
+    "train_density": 0.928045,
+    "val_density": 0.928426,
+    "missing_cell_policy": "absent (target, feature) rows filled with 0.0; density reported",
+    "combinatorial_perturbations": 0,
+    "gene_universe_rows": 18080,
+    "shared_feature_fraction_of_gene_universe": 0.639215,
+    "target_overlap_note": "0 shared perturbation targets: VCC 2025 validation perturbations are held out from training, so no target-level leakage is possible; train_mean is a gene-level transfer baseline, not a per-target copy."
+  },
+  "presets": {
+    "seed": 0,
+    "n_permutations": 1000,
+    "n_bootstrap": 2000,
+    "de_topk": 20,
+    "alpha": 0.05,
+    "multiple_testing": "benjamini-hochberg"
+  },
+  "baselines": [
+    "no_change",
+    "train_mean"
+  ],
+  "framework_metrics": [
+    {
+      "baseline": "no_change",
+      "metric": "MAE",
+      "value": 0.0965750822321286,
+      "ci_low": 0.07223336645741234,
+      "ci_high": 0.12356530629669639,
+      "permutation_p": 0.8351648351648352,
+      "p_adj": 1.0,
+      "higher_is_better": false
+    },
+    {
+      "baseline": "no_change",
+      "metric": "DES",
+      "value": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "permutation_p": 1.0,
+      "p_adj": 1.0,
+      "higher_is_better": true
+    },
+    {
+      "baseline": "no_change",
+      "metric": "PDS",
+      "value": 0.5,
+      "ci_low": NaN,
+      "ci_high": NaN,
+      "permutation_p": 1.0,
+      "p_adj": 1.0,
+      "higher_is_better": true
+    },
+    {
+      "baseline": "train_mean",
+      "metric": "MAE",
+      "value": 0.10332091423592153,
+      "ci_low": 0.08090046861078899,
+      "ci_high": 0.12810831716084906,
+      "permutation_p": 1.0,
+      "p_adj": 1.0,
+      "higher_is_better": false
+    },
+    {
+      "baseline": "train_mean",
+      "metric": "DES",
+      "value": 0.08295454545454545,
+      "ci_low": 0.06363636363636363,
+      "ci_high": 0.10343749999999986,
+      "permutation_p": 0.99000999000999,
+      "p_adj": 1.0,
+      "higher_is_better": true
+    },
+    {
+      "baseline": "train_mean",
+      "metric": "PDS",
+      "value": 0.5,
+      "ci_low": NaN,
+      "ci_high": NaN,
+      "permutation_p": 0.7682317682317682,
+      "p_adj": 1.0,
+      "higher_is_better": true
+    }
+  ],
+  "official_de_metrics": [
+    {
+      "baseline": "no_change",
+      "official_metric": "overlap_at_N",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.0,
+      "sd": 0.0,
+      "status": "OK"
+    },
+    {
+      "baseline": "no_change",
+      "official_metric": "overlap_at_50",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.0,
+      "sd": 0.0,
+      "status": "OK"
+    },
+    {
+      "baseline": "no_change",
+      "official_metric": "overlap_at_100",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.0,
+      "sd": 0.0,
+      "status": "OK"
+    },
+    {
+      "baseline": "no_change",
+      "official_metric": "precision_at_N",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.0,
+      "sd": 0.0,
+      "status": "OK"
+    },
+    {
+      "baseline": "no_change",
+      "official_metric": "precision_at_50",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.0,
+      "sd": 0.0,
+      "status": "OK"
+    },
+    {
+      "baseline": "no_change",
+      "official_metric": "de_direction_match",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.0,
+      "sd": 0.0,
+      "status": "OK"
+    },
+    {
+      "baseline": "no_change",
+      "official_metric": "de_spearman_lfc_sig",
+      "n_values": 44,
+      "n_finite": 0,
+      "mean": null,
+      "sd": null,
+      "status": "NA_ALL_NONFINITE"
+    },
+    {
+      "baseline": "no_change",
+      "official_metric": "de_sig_genes_recall",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.0,
+      "sd": 0.0,
+      "status": "OK"
+    },
+    {
+      "baseline": "no_change",
+      "official_metric": "de_spearman_sig",
+      "n_values": 1,
+      "n_finite": 0,
+      "mean": null,
+      "sd": null,
+      "status": "NA_ALL_NONFINITE"
+    },
+    {
+      "baseline": "no_change",
+      "official_metric": "pr_auc",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.26901480388844445,
+      "sd": 0.2599824804323923,
+      "status": "OK"
+    },
+    {
+      "baseline": "no_change",
+      "official_metric": "roc_auc",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.5,
+      "sd": 0.0,
+      "status": "OK"
+    },
+    {
+      "baseline": "train_mean",
+      "official_metric": "overlap_at_N",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.22501593741447642,
+      "sd": 0.16769487930377008,
+      "status": "OK"
+    },
+    {
+      "baseline": "train_mean",
+      "official_metric": "overlap_at_50",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.13863636363636364,
+      "sd": 0.11854919318609465,
+      "status": "OK"
+    },
+    {
+      "baseline": "train_mean",
+      "official_metric": "overlap_at_100",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.14270864381520118,
+      "sd": 0.11028772051953985,
+      "status": "OK"
+    },
+    {
+      "baseline": "train_mean",
+      "official_metric": "precision_at_N",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.21371186307326928,
+      "sd": 0.1780097986957,
+      "status": "OK"
+    },
+    {
+      "baseline": "train_mean",
+      "official_metric": "precision_at_50",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.13909090909090907,
+      "sd": 0.1180425264680839,
+      "status": "OK"
+    },
+    {
+      "baseline": "train_mean",
+      "official_metric": "de_direction_match",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.6127143080819448,
+      "sd": 0.12054847225819809,
+      "status": "OK"
+    },
+    {
+      "baseline": "train_mean",
+      "official_metric": "de_spearman_lfc_sig",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.21058781202477866,
+      "sd": 0.29744782903834316,
+      "status": "OK"
+    },
+    {
+      "baseline": "train_mean",
+      "official_metric": "de_sig_genes_recall",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.4141327396666815,
+      "sd": 0.09210965926036437,
+      "status": "OK"
+    },
+    {
+      "baseline": "train_mean",
+      "official_metric": "de_spearman_sig",
+      "n_values": 1,
+      "n_finite": 1,
+      "mean": 0.8772511149411185,
+      "sd": null,
+      "status": "OK"
+    },
+    {
+      "baseline": "train_mean",
+      "official_metric": "pr_auc",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.2895301286206538,
+      "sd": 0.2711095608206643,
+      "status": "OK"
+    },
+    {
+      "baseline": "train_mean",
+      "official_metric": "roc_auc",
+      "n_values": 44,
+      "n_finite": 44,
+      "mean": 0.5280917922130752,
+      "sd": 0.04960943668119484,
+      "status": "OK"
+    }
+  ],
+  "official_metric_alignment_map": [
+    {
+      "framework_metric": "MAE",
+      "official_counterpart": "mae / mae_delta",
+      "official_metric_type": "ANNDATA_PAIR",
+      "availability": "UNAVAILABLE",
+      "caveat": "Requires a valid single-cell h5ad; quarantined validation h5ad blocks it."
+    },
+    {
+      "framework_metric": "DES",
+      "official_counterpart": "overlap_at_N / precision_at_N / de_sig_genes_recall",
+      "official_metric_type": "DE",
+      "availability": "AVAILABLE",
+      "caveat": "Both measure DE-gene recovery, but our DES is top-k by |LFC| without FDR filtering; official overlap ranks post-FDR significant genes. Not interchangeable."
+    },
+    {
+      "framework_metric": "PDS",
+      "official_counterpart": "discrimination_score_cosine",
+      "official_metric_type": "ANNDATA_PAIR",
+      "availability": "UNAVAILABLE",
+      "caveat": "Official implementation operates on cell-level profiles, not DE tables."
+    }
+  ],
+  "cell_eval_score": {
+    "status": "UPSTREAM_BUG__EQUIVALENT_REIMPLEMENTATION",
+    "metrics_compared": [
+      "de_direction_match",
+      "de_sig_genes_recall",
+      "overlap_at_100",
+      "overlap_at_50",
+      "overlap_at_N",
+      "pr_auc",
+      "precision_at_50",
+      "precision_at_N",
+      "roc_auc"
+    ],
+    "detail": "IndexError: arrays used as indices must be of integer (or boolean) type",
+    "comparison_semantics": "train_mean baseline vs no_change baseline; NOT a model-vs-baseline result",
+    "note": "Official API attempted first; site-packages untouched.",
+    "best_values": {
+      "de_direction_match": "one",
+      "de_sig_genes_recall": "one",
+      "overlap_at_100": "one",
+      "overlap_at_50": "one",
+      "overlap_at_N": "one",
+      "pr_auc": "one",
+      "precision_at_50": "one",
+      "precision_at_N": "one",
+      "roc_auc": "one"
+    },
+    "n_zero_best": 0,
+    "n_one_best": 9,
+    "formula_source": "cell_eval/_score.py::_calc_norm_by_zero / _calc_norm_by_one",
+    "upstream_bug": "empty np.array([]) float64 index in score_agg_metrics"
+  },
+  "environment": {
+    "python": "3.13.14",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "cell_eval": "0.8.2",
+    "polars": "2.1.0",
+    "scipy": "1.18.1"
+  },
+  "warnings": [
+    "NO virtual cell model was run. scGPT / Geneformer weights are not installed; these are baseline-only results and must not be used to accept or reject H2.",
+    "ANNDATA_PAIR official metrics (mae, mae_delta, discrimination_score_*) are UNAVAILABLE because the 6.9 GB validation h5ad failed the W1b content gate and was quarantined as CORRUPT_INCOMPLETE.",
+    "Framework-internal MAE/DES/PDS are NOT numerically interchangeable with the official cell-eval metrics; see w4_alignment_map.csv and Results [[R8]].",
+    "additive baseline is not applicable: zero combinatorial perturbations in the VCC 2025 DE tables; its absence is reported rather than imputed.",
+    "7.16% of validation (target, feature) cells are absent measurements filled with 0.0; density is reported.",
+    "The train_mean baseline's p_value/fdr are operational training-derived ranking statistics (one-sample t + BH over training perturbations), not a claim of statistical significance of a prediction and not derived from validation labels.",
+    "These are DE-level, hESC-domain results. They are not embryo results and imply no functional validation in embryos.",
+    "score_agg_metrics in cell-eval 0.8.2 fails on an all-ONE-best DE metric set (empty float64 index array). The identical publishable normalization formulas were reimplemented in this script; site-packages was NOT modified. See w4_official_baseline_diff.csv and the cell_eval_score block in the JSON.",
+    "This score comparison is baseline-vs-baseline calibration (train_mean vs no_change), NOT a model-vs-baseline result. No preregistered model was run.",
+    "0/44 validation perturbation targets occur in training; results are out-of-target, not in-sample fits."
+  ]
+}

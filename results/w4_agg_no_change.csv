@@ -1,0 +1,2 @@
+statistic,de_direction_match,de_sig_genes_recall,overlap_at_100,overlap_at_50,overlap_at_N,pr_auc,precision_at_50,precision_at_N,roc_auc
+mean,0.0,0.0,0.0,0.0,0.0,0.26901480388844445,0.0,0.0,0.5

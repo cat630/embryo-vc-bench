@@ -1,0 +1,108 @@
+{
+  "gene_space": {
+    "n_genes": 17555,
+    "fingerprint": "d4a3402091e00bf7ff7b0035913ecc7949ae5bf270e25221c112735234266e7c",
+    "first_genes": [
+      "A1CF",
+      "A2M",
+      "A2ML1",
+      "A3GALT2",
+      "A4GALT"
+    ],
+    "scgpt_tokens_resolved": 17555,
+    "geneformer_tokens_resolved": 17555,
+    "sources": {
+      "arc_gene_names": "ARC_gene_names__gene_names.csv",
+      "n_arc": 18080,
+      "scgpt_vocab": "vocab.json",
+      "n_scgpt_vocab": 60697,
+      "geneformer_token_dict": "token_dictionary_gc30M.pkl",
+      "n_geneformer_tokens": 25426,
+      "geneformer_name_map": "gene_name_id_dict_gc30M.pkl"
+    }
+  },
+  "atlases": {
+    "E-MTAB-3929": {
+      "name": "E-MTAB-3929",
+      "n_cells": 1529,
+      "n_genes": 17555,
+      "genes_detected_in_universe": 16512,
+      "stage_counts": {
+        "embryonic day 7": 466,
+        "embryonic day 6": 415,
+        "embryonic day 5": 377,
+        "embryonic day 4": 190,
+        "embryonic day 3": 81
+      },
+      "lineage_counts": {
+        "trophectoderm": 861,
+        "": 433,
+        "epiblast": 127,
+        "primitive endoderm": 108
+      },
+      "fingerprint": "4b416e1fb84941d9dc6b44368b5226d2624ad0da0f59e5c1cab9d15770f56511",
+      "source_files": [
+        "BS_E-MTAB-3929_counts__counts.txt",
+        "BS_E-MTAB-3929_sdrf__E-MTAB-3929.sdrf.txt"
+      ],
+      "citation": "Petropoulos et al., Cell 2016; E-MTAB-3929",
+      "label_source": "sdrf Characteristics[developmental stage] / [inferred lineage]",
+      "source_sha256": {
+        "BS_E-MTAB-3929_counts__counts.txt": "2e39a0f400b91b1058d6eca5a32dbf6c33a60c3eb41611c1e650183a0d96b35e",
+        "BS_E-MTAB-3929_sdrf__E-MTAB-3929.sdrf.txt": "f9484c3141391e5dd6a54dd97f60c8f6800ff3d0b2b825a8c9ddce8eb33296e4"
+      }
+    },
+    "GSE66507": {
+      "name": "GSE66507",
+      "n_cells": 30,
+      "n_genes": 17555,
+      "genes_detected_in_universe": 14709,
+      "stage_counts": {
+        "": 30
+      },
+      "lineage_counts": {
+        "TE": 16,
+        "EPI": 8,
+        "PE": 6
+      },
+      "fingerprint": "8eea368f19df859d061f864d3ff60ffdbaab6dcaa408ac7d49f948f2ebe2eda6",
+      "source_files": [
+        "GEO_GSE66507_human_blastocyst_rnaseq_counts__GSE66507_human_blastocyst_rnaseq_counts.txt.gz"
+      ],
+      "citation": "Blakeley et al., Development 2015; GSE66507",
+      "label_source": "column-name lineage prefix (TE/EPI/PE)",
+      "id_mapping": "Ensembl -> symbol via Geneformer gene_name_id_dict_gc30M.pkl",
+      "source_sha256": {
+        "GEO_GSE66507_human_blastocyst_rnaseq_counts__GSE66507_human_blastocyst_rnaseq_counts.txt.gz": "ab822e52cb4aa0056e2135ff4ddf9a3e2451a0af0a739271688a4fa7dc23c4cb"
+      }
+    },
+    "GSE136447": {
+      "name": "GSE136447",
+      "n_cells": 555,
+      "n_genes": 17555,
+      "genes_detected_in_universe": 16840,
+      "stage_counts": {
+        "D14": 136,
+        "D12": 88,
+        "D10": 77,
+        "D9": 68,
+        "D7": 65,
+        "D6": 62,
+        "D8": 59
+      },
+      "lineage_counts": {
+        "": 555
+      },
+      "fingerprint": "363622be9906a22e147b0fc8a7de07e03500a7cb5d576c3f00dcdf9ace95eb70",
+      "source_files": [
+        "GEO_GSE136447_555sample_gene_count_matrix__GSE136447_555sample_gene_count_matrix.txt.gz"
+      ],
+      "citation": "Xiang et al., Nature 2020; GSE136447",
+      "label_source": "column-name day prefix (D6/D7)",
+      "id_mapping": "suffix after '|' in gene_id",
+      "source_sha256": {
+        "GEO_GSE136447_555sample_gene_count_matrix__GSE136447_555sample_gene_count_matrix.txt.gz": "c701cff79db343edb930c707120985c322cadcc3a9ecabcb45d33079a80b28a1"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "decision": "amendment_filed",
+  "osf_update_timestamp_utc": "2026-11-18T05:18:50.713348Z",
+  "osf_schema_response_id": "6afd34e3f6fa83248e43d68e",
+  "osf_reviews_state": "approved",
+  "osf_updated_response_keys": ["72-49"],
+  "decided_by": "ZHAO Mingpeng",
+  "recorded_at": "2026-11-18T05:22:35+00:00",
+  "rationale": "One consolidated timestamped OSF update disclosing D1-D4 and frozen implementation specifications before the first model score. Verified against the OSF API v2 schema-responses endpoint: approved, submitted 2026-11-18T05:18:50.713348Z, only response key 72-49 (analysis plan pointer) changed; no hypothesis, metric, fold, seed, model set or dataset rule changed."
+}

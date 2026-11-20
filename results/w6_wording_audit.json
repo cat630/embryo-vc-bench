@@ -1,0 +1,86 @@
+{
+  "schema_version": "w6-orthogonal-v1",
+  "generated_at": "2026-11-18T08:10:15+00:00",
+  "work_package": "W6 orthogonal validation",
+  "registration": "OSF 8tzrq (10.17605/OSF.IO/8TZRQ)",
+  "analysis": "binding wording-constraint audit",
+  "compliance_boundary": {
+    "no_model_loaded": true,
+    "no_new_model_score": true,
+    "no_new_inferential_test": true,
+    "no_new_p_value": true,
+    "no_preregistered_criterion_changed": true,
+    "h2_adjudication_reopened": false,
+    "third_osf_update_required": false,
+    "note": "Descriptive re-stratification of the already-released preregistered score table and audits of existing artefacts only. Registered dataset/model sets, metrics, thresholds, folds and seeds are unchanged."
+  },
+  "historical_design_table_notes": {
+    "description": "The proposal §8 claim-strength table is a preserved design-stage artefact. Its 'can write' column still lists the tau-era phrase 'domain gap quantified along the latent time axis', which is no longer applicable because tau was never fitted. It is retained for audit provenance and is NOT part of the submission manuscript.",
+    "hits": [
+      {
+        "line": 195,
+        "phrase": "domain gap quantified along the latent time axis"
+      }
+    ],
+    "tau_phrase_absent_from_manuscript": true,
+    "action": "No edit to the proposal's historical table; the manuscript is the submission text and must not contain the phrase. Verified above."
+  },
+  "documents": {
+    "manuscript": {
+      "file": "virtual-cell-benchmark-manuscript-v0.md",
+      "sha256": "fcaf53ca8f178a3fa9e0ef443d70309f05f1da34fca5ebda16f80c4de7dd6b94",
+      "n_lines": 335,
+      "n_forbidden_phrase_hits": 19,
+      "by_classification": {
+        "NEGATED": 6,
+        "PROHIBITED_EXAMPLE_COLUMN": 8,
+        "AUDIT_CHECKLIST": 5
+      },
+      "n_unresolved_assertions": 0,
+      "unresolved": []
+    },
+    "proposal": {
+      "file": "virtual-cell-benchmark-proposal-v1.md",
+      "sha256": "07d0f079f449a3057a924f19effb5888d8af4dad518bb78d90567e50b6f4a321",
+      "n_lines": 458,
+      "n_forbidden_phrase_hits": 17,
+      "by_classification": {
+        "PROHIBITED_EXAMPLE_COLUMN": 14,
+        "HISTORICAL_DESIGN_TABLE": 1,
+        "NEGATED": 1,
+        "AUDIT_CHECKLIST": 1
+      },
+      "n_unresolved_assertions": 0,
+      "unresolved": []
+    },
+    "readme": {
+      "file": "embryo-vc-bench\\README.md",
+      "sha256": "8b16972b64f48a07915c85f174354abbb3d8cccf1862021985f09566d0d053cd",
+      "n_lines": 810,
+      "n_forbidden_phrase_hits": 0,
+      "by_classification": {},
+      "n_unresolved_assertions": 0,
+      "unresolved": []
+    },
+    "osf_draft": {
+      "file": "osf-preregistration-draft.md",
+      "sha256": "67824f2d8e4f2eaf72ea9af59e662cb89ff52319afacdb573abac1cee1727c33",
+      "n_lines": 330,
+      "n_forbidden_phrase_hits": 6,
+      "by_classification": {
+        "NEGATED": 6
+      },
+      "n_unresolved_assertions": 0,
+      "unresolved": []
+    }
+  },
+  "permitted_phrasing_in_manuscript": {
+    "internally stable across seeds": true,
+    "externally replicable across independent atlases": true,
+    "orthogonal support from published perturbation experiments": true
+  },
+  "prohibited_example_columns_are_exempt": "Table rows that list a phrase under 'Wording prohibited' / '不可写' are examples of forbidden language, not assertions; they are counted separately, not as violations.",
+  "preimplantation_note": "Bare 'implantation' is NOT audited because it is a substring of 'preimplantation'; only explicit predictive/clinical phrases are.",
+  "result": "PASS",
+  "status": "COMPUTED - PASS"
+}

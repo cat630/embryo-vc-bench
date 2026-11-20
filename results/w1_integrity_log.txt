@@ -1,0 +1,28 @@
+PASS    GEO_GSE36552_SOFT                                gzip      sha=OK content=OK | gzip CRC OK; 405,831 uncompressed bytes
+PASS    GEO_GSE66507_SOFT                                gzip      sha=OK content=OK | gzip CRC OK; 214,211 uncompressed bytes
+PASS    GEO_GSE44183_SOFT                                gzip      sha=OK content=OK | gzip CRC OK; 124,581 uncompressed bytes
+PASS    GEO_GSE136447_SOFT                               gzip      sha=OK content=OK | gzip CRC OK; 3,565,291 uncompressed bytes
+PASS    GEO_GSE109555_SOFT                               gzip      sha=OK content=OK | gzip CRC OK; 642,648 uncompressed bytes
+PASS    GEO_GSE150578_SOFT                               gzip      sha=OK content=OK | gzip CRC OK; 39,691 uncompressed bytes
+PASS    BS_E-MTAB-3929_record                            unknown   sha=OK content=OK | first 65,536 bytes readable as text
+PASS    BS_E-MTAB-8060_record                            unknown   sha=OK content=OK | first 14,646 bytes readable as text
+PASS    BS_E-MTAB-9388_record                            unknown   sha=OK content=OK | first 59,681 bytes readable as text
+PASS    ENA_PRJEB30442_record                            unknown   sha=OK content=OK | first 3,308 bytes readable as text
+PASS    BS_E-MTAB-3929_counts                            unknown   sha=OK content=OK | first 65,536 bytes readable as text
+PASS    BS_E-MTAB-3929_ercc_counts                       unknown   sha=OK content=OK | first 65,536 bytes readable as text
+PASS    BS_E-MTAB-3929_sdrf                              unknown   sha=OK content=OK | first 65,536 bytes readable as text
+PASS    BS_E-MTAB-3929_idf                               unknown   sha=OK content=OK | first 4,716 bytes readable as text
+PASS    GEO_GSE44183_RAW                                 tar       sha=OK content=OK | 1 members, 48,654,870 bytes uncompressed
+PASS    GEO_GSE66507_human_blastocyst_rnaseq_counts      gzip      sha=OK content=OK | gzip CRC OK; 5,411,638 uncompressed bytes
+PASS    GEO_GSE136447_555-samples-fpkm                   gzip      sha=OK content=OK | gzip CRC OK; 229,444,437 uncompressed bytes
+PASS    GEO_GSE136447_555sample_gene_count_matrix        gzip      sha=OK content=OK | gzip CRC OK; 86,144,486 uncompressed bytes
+PASS    GEO_GSE109555_RAW                                tar       sha=OK content=OK | 125 members, 82,120 bytes uncompressed
+PASS    GEO_GSE150578_RAW                                tar       sha=OK content=OK | 9 members, 119,887,147 bytes uncompressed
+PASS    ARC_gene_names                                   unknown   sha=OK content=OK | first 65,536 bytes readable as text
+PASS    ARC_pert_counts_train                            unknown   sha=OK content=OK | first 2,824 bytes readable as text
+PASS    ARC_pert_counts_validation                       unknown   sha=OK content=OK | first 978 bytes readable as text
+PASS    ARC_pert_counts_test                             unknown   sha=OK content=OK | first 1,894 bytes readable as text
+PASS    VCC_validation_h5ad_GCS                          h5ad      sha=OK content=OK | shape=(98927, 18080), root_keys=['X', 'layers', 'obs', 'obsm', 'obsp', 'uns'], obs_cols=['target_gene', 'guide
+PASS    VCC_competition_train_DE_parquet                 parquet   sha=OK content=OK | 1,566,978 rows x 10 cols, 13 row group(s)
+PASS    VCC_competition_val_DE_parquet                   parquet   sha=OK content=OK | 472,187 rows x 10 cols, 4 row group(s)
+W1b integrity: 27/27 PASS, 0 FAIL

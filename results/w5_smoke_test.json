@@ -1,0 +1,135 @@
+{
+  "schema_version": "w5-smoke-test-v1",
+  "analysis_status": "LOADABILITY CHECK ONLY - NO MODEL WAS RUN, NO CELL WAS EMBEDDED, NO SCORE WAS COMPUTED",
+  "preregistration": {
+    "url": "https://osf.io/8tzrq/overview",
+    "doi": "10.17605/OSF.IO/8TZRQ",
+    "frozen_model_set": [
+      "scGPT",
+      "Geneformer"
+    ]
+  },
+  "environment": {
+    "python": "3.13.14",
+    "executable": "D:\\WB\\2026-11-15-06-58-47\\embryo-vc-bench\\.venv-models\\Scripts\\python.exe",
+    "is_isolated_env": true,
+    "versions": {
+      "torch": "2.15.0",
+      "transformers": "4.46.3",
+      "datasets": "2.21.0",
+      "safetensors": "0.8.0",
+      "huggingface_hub": "0.36.2",
+      "scgpt": "NOT_INSTALLED",
+      "geneformer": "NOT_INSTALLED"
+    }
+  },
+  "models": [
+    {
+      "model": "scGPT",
+      "checks": [
+        {
+          "path": "models/scGPT/best_model.pt",
+          "bytes": 205385258,
+          "sha256": "6cb5d451ab5c4b33eb673adbe4fddc61d2389df1b89b7651a9fe2e557572b922",
+          "hash_matches_manifest": true,
+          "status": "OK"
+        },
+        {
+          "path": "models/scGPT/vocab.json",
+          "bytes": 1317639,
+          "sha256": "acca93d114ca62c3f0f50debbd23e8c87f0714f4737764454f6b2b13f2e8580f",
+          "hash_matches_manifest": true,
+          "status": "OK"
+        }
+      ],
+      "checkpoint_reader": "torch.load(weights_only=True)",
+      "checkpoint_type": "OrderedDict",
+      "checkpoint_keys": [
+        "decoder.fc.0.bias",
+        "decoder.fc.0.weight",
+        "decoder.fc.2.bias",
+        "decoder.fc.2.weight",
+        "decoder.fc.4.bias",
+        "decoder.fc.4.weight",
+        "encoder.embedding.weight",
+        "encoder.enc_norm.bias",
+        "encoder.enc_norm.weight",
+        "flag_encoder.weight",
+        "mvc_decoder.W.weight",
+        "mvc_decoder.gene2query.bias"
+      ],
+      "n_tensors": 163,
+      "status": "LOADABLE",
+      "vocab_entries": 60697,
+      "vocab_sample_keys": [
+        "RP5-973N23.5",
+        "RP11-182N22.10",
+        "CTB-53D8.3",
+        "RP11-348N17.2",
+        "RP11-205M20.8"
+      ]
+    },
+    {
+      "model": "Geneformer",
+      "checks": [
+        {
+          "path": "models/Geneformer/Geneformer-V1-10M/config.json",
+          "bytes": 565,
+          "sha256": "9cf69ca3bdb0215c4188b54c451b6f02adfe68b8f66011a57d0f32845133fd4b",
+          "hash_matches_manifest": true,
+          "status": "OK"
+        },
+        {
+          "path": "models/Geneformer/Geneformer-V1-10M/model.safetensors",
+          "bytes": 41183536,
+          "sha256": "a5e33a757431643b3697de7ef6127950cdc49e06e58d4266b3a3ab191b683f14",
+          "hash_matches_manifest": true,
+          "status": "OK"
+        },
+        {
+          "path": "models/Geneformer/geneformer/gene_dictionaries_30m/token_dictionary_gc30M.pkl",
+          "bytes": 788424,
+          "sha256": "ab9dc40973fa5224d77b793e2fd114cacf3d08423ed9c4c49caf0ba9c7f218f1",
+          "hash_matches_manifest": true,
+          "status": "OK"
+        },
+        {
+          "path": "models/Geneformer/geneformer/gene_dictionaries_30m/gene_name_id_dict_gc30M.pkl",
+          "bytes": 1117117,
+          "sha256": "55e67962e79c0039a6c32d43c5c99f38e51964bbcfa32f736150ee1e285c438c",
+          "hash_matches_manifest": true,
+          "status": "OK"
+        },
+        {
+          "path": "models/Geneformer/geneformer/gene_dictionaries_30m/gene_median_dictionary_gc30M.pkl",
+          "bytes": 940965,
+          "sha256": "b3b589bb5ec75040d05fc44dd6bf0184cf87f3c362cf158d196a6ed3b7fe5f39",
+          "hash_matches_manifest": true,
+          "status": "OK"
+        }
+      ],
+      "config": {
+        "architectures": [
+          "BertForMaskedLM"
+        ],
+        "hidden_size": 256,
+        "num_hidden_layers": 6,
+        "max_position_embeddings": 2048,
+        "vocab_size": 25426
+      },
+      "n_parameters": 10288722,
+      "model_class": "BertForMaskedLM",
+      "status": "LOADABLE",
+      "dictionary_sizes": {
+        "token_dictionary_gc30M.pkl": 25426,
+        "gene_name_id_dict_gc30M.pkl": 40248,
+        "gene_median_dictionary_gc30M.pkl": 25424
+      }
+    }
+  ],
+  "warnings": [
+    "This is not an analysis. Nothing here may be reported as a result or used to accept/reject H1, H2 or H3.",
+    "The main .venv (W1-W4) must remain frozen; model inference runs only in .venv-models.",
+    "Weights were downloaded from hf-mirror.com at immutable commits and are hash-verified against model_manifest.csv."
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "status": "PREREGISTERED MODEL SCORES - draft, not yet released",
+  "generated_at": "2026-11-18T06:36:10Z",
+  "decision": {
+    "decision": "amendment_filed",
+    "osf_update_timestamp_utc": "2026-11-18T05:18:50.713348Z",
+    "osf_schema_response_id": "6afd34e3f6fa83248e43d68e",
+    "osf_reviews_state": "approved",
+    "osf_updated_response_keys": [
+      "72-49"
+    ],
+    "decided_by": "ZHAO Mingpeng",
+    "recorded_at": "2026-11-18T05:22:35+00:00",
+    "rationale": "One consolidated timestamped OSF update disclosing D1-D4 and frozen implementation specifications before the first model score. Verified against the OSF API v2 schema-responses endpoint: approved, submitted 2026-11-18T05:18:50.713348Z, only response key 72-49 (analysis plan pointer) changed; no hypothesis, metric, fold, seed, model set or dataset rule changed."
+  },
+  "audit": {
+    "decision": {
+      "decision": "amendment_filed",
+      "osf_update_timestamp_utc": "2026-11-18T05:18:50.713348Z",
+      "osf_schema_response_id": "6afd34e3f6fa83248e43d68e",
+      "osf_reviews_state": "approved",
+      "osf_updated_response_keys": [
+        "72-49"
+      ],
+      "decided_by": "ZHAO Mingpeng",
+      "recorded_at": "2026-11-18T05:22:35+00:00",
+      "rationale": "One consolidated timestamped OSF update disclosing D1-D4 and frozen implementation specifications before the first model score. Verified against the OSF API v2 schema-responses endpoint: approved, submitted 2026-11-18T05:18:50.713348Z, only response key 72-49 (analysis plan pointer) changed; no hypothesis, metric, fold, seed, model set or dataset rule changed."
+    },
+    "protocol_version": "w5-adapter-protocol-2",
+    "started_at": "2026-11-18T05:23:34Z",
+    "models": [
+      "Geneformer",
+      "scGPT"
+    ],
+    "n_folds": 15,
+    "errors": [],
+    "smoke": false
+  },
+  "by_task_method": [
+    {
+      "task": "T2_surrogate",
+      "method": "Geneformer",
+      "n": 15,
+      "MAE_mean": 0.16190110559029544,
+      "MAE_sd": 0.02893761806195995,
+      "MAE_ci95": [
+        0.1478962905134643,
+        0.17636492694563502
+      ],
+      "MAE_z_mean": 1.0876959733720817,
+      "MAE_z_sd": 0.016745923914215786,
+      "MAE_z_ci95": [
+        1.079866595014968,
+        1.0960540403824963
+      ],
+      "DES_mean": 0.0015151515151515154,
+      "DES_sd": 0.0014670391462906884,
+      "DES_ci95": [
+        0.0008333333333333335,
+        0.002272727272727273
+      ],
+      "PDS_mean": 0.4937279774489077,
+      "PDS_sd": 0.04427047945185961,
+      "PDS_ci95": [
+        0.47293780831571536,
+        0.517267441860465
+      ]
+    },
+    {
+      "task": "T2_surrogate",
+      "method": "no_change",
+      "n": 15,
+      "MAE_mean": 0.07461133850491695,
+      "MAE_sd": 0.018352454053509448,
+      "MAE_ci95": [
+        0.06563369100881282,
+        0.08328089794475352
+      ],
+      "MAE_z_mean": 0.7524028492508356,
+      "MAE_z_sd": 0.013388096420680827,
+      "MAE_z_ci95": [
+        0.7461400175931456,
+        0.7592385318461938
+      ],
+      "DES_mean": 0.0,
+      "DES_sd": 0.0,
+      "DES_ci95": [
+        0.0,
+        0.0
+      ],
+      "PDS_mean": 0.5,
+      "PDS_sd": 0.0,
+      "PDS_ci95": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "task": "T2_surrogate",
+      "method": "scGPT",
+      "n": 15,
+      "MAE_mean": 0.07480212727245365,
+      "MAE_sd": 0.018293629057509135,
+      "MAE_ci95": [
+        0.06587514443671807,
+        0.08345664408117134
+      ],
+      "MAE_z_mean": 0.8436117945612405,
+      "MAE_z_sd": 0.009573042729566232,
+      "MAE_z_ci95": [
+        0.8391199977356528,
+        0.8484563781270198
+      ],
+      "DES_mean": 0.05249999999999997,
+      "DES_sd": 0.0033873767333162164,
+      "DES_ci95": [
+        0.05098484848484845,
+        0.05424242424242422
+      ],
+      "PDS_mean": 0.8607117688513036,
+      "PDS_sd": 0.04319458698611567,
+      "PDS_ci95": [
+        0.8398854827343198,
+        0.8817838266384778
+      ]
+    },
+    {
+      "task": "T2_surrogate",
+      "method": "train_mean",
+      "n": 15,
+      "MAE_mean": 0.08262596516801819,
+      "MAE_sd": 0.0100043210622839,
+      "MAE_ci95": [
+        0.07785429172630447,
+        0.08729492512880285
+      ],
+      "MAE_z_mean": 0.9562485791174994,
+      "MAE_z_sd": 0.00966289123564383,
+      "MAE_z_ci95": [
+        0.951623125185005,
+        0.9608740330499936
+      ],
+      "DES_mean": 0.021212121212121217,
+      "DES_sd": 0.007208352811551665,
+      "DES_ci95": [
+        0.017803030303030307,
+        0.0246969696969697
+      ],
+      "PDS_mean": 0.5,
+      "PDS_sd": 3.317425804434375e-17,
+      "PDS_ci95": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "task": "T3_DE_real",
+      "method": "Geneformer",
+      "n": 5,
+      "MAE_mean": 0.17849870897662132,
+      "MAE_sd": 0.005646176202739396,
+      "MAE_ci95": [
+        0.17460205908247167,
+        0.18297029589758296
+      ],
+      "MAE_z_mean": 0.9794324192328082,
+      "MAE_z_sd": 0.0020083933140124634,
+      "MAE_z_ci95": [
+        0.9779387689315013,
+        0.9809997031180695
+      ],
+      "DES_mean": 0.010909090909090912,
+      "DES_sd": 0.0037344719829897695,
+      "DES_ci95": [
+        0.007954545454545454,
+        0.013636363636363637
+      ],
+      "PDS_mean": 0.5131078224101481,
+      "PDS_sd": 0.013616477625186009,
+      "PDS_ci95": [
+        0.5035940803382664,
+        0.5251585623678647
+      ]
+    },
+    {
+      "task": "T3_DE_real",
+      "method": "no_change",
+      "n": 5,
+      "MAE_mean": 0.09648897481634545,
+      "MAE_sd": 0.0,
+      "MAE_ci95": [
+        0.09648897481634545,
+        0.09648897481634545
+      ],
+      "MAE_z_mean": 0.5072853574404135,
+      "MAE_z_sd": 0.0,
+      "MAE_z_ci95": [
+        0.5072853574404135,
+        0.5072853574404135
+      ],
+      "DES_mean": 0.0,
+      "DES_sd": 0.0,
+      "DES_ci95": [
+        0.0,
+        0.0
+      ],
+      "PDS_mean": 0.5,
+      "PDS_sd": 0.0,
+      "PDS_ci95": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "task": "T3_DE_real",
+      "method": "scGPT",
+      "n": 5,
+      "MAE_mean": 0.09645438514649428,
+      "MAE_sd": 2.734524480839004e-06,
+      "MAE_ci95": [
+        0.09645197742624284,
+        0.09645603820286935
+      ],
+      "MAE_z_mean": 0.5640739911718824,
+      "MAE_z_sd": 0.006518913281825782,
+      "MAE_z_ci95": [
+        0.5585856837738228,
+        0.5687463114101559
+      ],
+      "DES_mean": 0.051590909090909076,
+      "DES_sd": 0.0023564137901508795,
+      "DES_ci95": [
+        0.04977272727272726,
+        0.05340909090909089
+      ],
+      "PDS_mean": 0.8538054968287527,
+      "PDS_sd": 0.01747626180120243,
+      "PDS_ci95": [
+        0.8414376321353065,
+        0.8689217758985202
+      ]
+    },
+    {
+      "task": "T3_DE_real",
+      "method": "train_mean",
+      "n": 5,
+      "MAE_mean": 0.10322967966683556,
+      "MAE_sd": 0.0,
+      "MAE_ci95": [
+        0.10322967966683556,
+        0.10322967966683556
+      ],
+      "MAE_z_mean": 0.8201609625467835,
+      "MAE_z_sd": 0.0,
+      "MAE_z_ci95": [
+        0.8201609625467835,
+        0.8201609625467835
+      ],
+      "DES_mean": 0.08409090909090909,
+      "DES_sd": 0.0,
+      "DES_ci95": [
+        0.08409090909090909,
+        0.08409090909090909
+      ],
+      "PDS_mean": 0.5,
+      "PDS_sd": 0.0,
+      "PDS_ci95": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "h1_status": "demoted to exploratory (3 independent atlases < 5 folds)",
+  "h2_status": "NOT CONFIRMED as a uniform null; partial evidence against; NOT formally falsified. The registered >=2-independent-datasets premise is unmet: T2 is a surrogate in-silico construct built on three independent embryo atlases but keyed to the same 44 VCC validation target genes as T3 (whose ground truth is the published VCC validation DE table); a computational surrogate is not an independent real perturbation dataset. W6 cross-atlas replication shows the direction-magnitude dissociation is stable across three held-out atlases but does not convert T2 into an independent real dataset. 'Stably outperforms the baselines' does not hold across DES/PDS/MAE or against both baselines. scGPT's directional advantage and magnitude failure are reported with equal prominence. No post-scoring test added, no preregistered criterion changed, no third OSF update. Factual correction logged 2026-11-18 (W6): the earlier wording 'T2/T3 derive from one VCC train/validation DE split' was imprecise; adjudication outcome unchanged.",
+  "scale_warning": "DES/PDS scale-free; MAE_z is per-perturbation z-scored",
+  "h2_adjudication": {
+    "decision": "mixed_outcome_not_formally_falsified",
+    "h2_wording": "not confirmed as a uniform null; partial evidence against; NOT formally falsified",
+    "decided_by": "ZHAO Mingpeng (author/editor)",
+    "recorded_at": "2026-11-18T07:26:59+00:00",
+    "reasons": [
+      "T2 is a surrogate in-silico construct built from three independent embryo atlases but keyed to the same 44 VCC validation target genes as T3, whose ground truth is the published VCC validation DE table; the two tasks do not constitute >=2 independent perturbational datasets. W6 cross-atlas replication shows stable direction-magnitude dissociation across three held-out atlases but does not convert a surrogate into a real dataset.",
+      "'Stably outperforms the baselines' is not satisfied across all registered primary metrics (DES, PDS, MAE) or against both mandatory baselines.",
+      "Registered permutation null tests each method against permuted rows, not the model-versus-baseline contrast; paired effect sizes with bootstrap CIs are the primary comparison.",
+      "T3 scGPT DES is below train_mean and its DES contrast CI lower bound (0.04977) falls below delta2 = 0.05."
+    ],
+    "no_post_scoring_test": true,
+    "no_preregistered_criterion_changed": true,
+    "third_osf_update_required": false,
+    "manuscript_slots_filled": [
+      "R4"
+    ],
+    "manuscript_slots_permanent_placeholders": [
+      "R2",
+      "R3",
+      "R5"
+    ],
+    "disclosed_in": [
+      "manuscript 3.3",
+      "manuscript 4.1",
+      "manuscript 4.6",
+      "embryo-vc-bench/README.md 3.10",
+      "osf-preregistration-draft.md 12"
+    ],
+    "w6_factual_correction": {
+      "date": "2026-11-18",
+      "found_by": "W6 direct reading of w5_score.py surrogate construction",
+      "old_wording": "T2/T3 derive from one VCC train/validation DE split",
+      "corrected_wording": "T2 is a surrogate built from three independent atlases but keyed to the same 44 VCC validation target genes as T3",
+      "adjudication_outcome_changed": false,
+      "preregistered_criterion_changed": false,
+      "third_osf_update_required": false
+    }
+  }
+}

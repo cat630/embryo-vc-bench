@@ -1,0 +1,144 @@
+[
+  {
+    "at": "2026-11-18T01:22:22+00:00",
+    "result": "VERIFY_ONLY",
+    "ok": true,
+    "n_chunks": 826,
+    "done_chunks": 44,
+    "remaining_chunks": 782,
+    "remaining_bytes": 6559891456,
+    "sampled_done_chunks": [
+      {
+        "chunk": 2,
+        "http_status": 206,
+        "identical": true,
+        "local_nonzero": true
+      },
+      {
+        "chunk": 16,
+        "http_status": 206,
+        "identical": true,
+        "local_nonzero": true
+      },
+      {
+        "chunk": 24,
+        "http_status": 206,
+        "identical": true,
+        "local_nonzero": true
+      },
+      {
+        "chunk": 30,
+        "http_status": 206,
+        "identical": true,
+        "local_nonzero": true
+      },
+      {
+        "chunk": 37,
+        "http_status": 206,
+        "identical": true,
+        "local_nonzero": true
+      }
+    ],
+    "negative_control": {
+      "chunk": 541,
+      "http_status": 206,
+      "local_all_zero": true,
+      "remote_nonzero": true
+    },
+    "remote_fingerprint": {
+      "content_length": 6928967541,
+      "etag": "\"-CKnE7O/MwpEDEAE=\"",
+      "generation": "1765905029341737",
+      "last_modified": "Tue, 16 Dec 2025 17:10:29 GMT",
+      "goog_hash": "crc32c=EendZg==",
+      "component_count": "32",
+      "accept_ranges": "bytes"
+    },
+    "mode": "from-quarantine"
+  },
+  {
+    "at": "2026-11-18T01:31:57+00:00",
+    "result": "REPAIRED",
+    "ok": true,
+    "n_chunks": 826,
+    "done_chunks": 44,
+    "remaining_chunks": 782,
+    "remaining_bytes": 6559891456,
+    "sampled_done_chunks": [
+      {
+        "chunk": 2,
+        "http_status": 206,
+        "identical": true,
+        "local_nonzero": true
+      },
+      {
+        "chunk": 16,
+        "http_status": 206,
+        "identical": true,
+        "local_nonzero": true
+      },
+      {
+        "chunk": 24,
+        "http_status": 206,
+        "identical": true,
+        "local_nonzero": true
+      },
+      {
+        "chunk": 30,
+        "http_status": 206,
+        "identical": true,
+        "local_nonzero": true
+      },
+      {
+        "chunk": 37,
+        "http_status": 206,
+        "identical": true,
+        "local_nonzero": true
+      }
+    ],
+    "negative_control": {
+      "chunk": 541,
+      "http_status": 206,
+      "local_all_zero": true,
+      "remote_nonzero": true
+    },
+    "remote_fingerprint": {
+      "content_length": 6928967541,
+      "etag": "\"-CKnE7O/MwpEDEAE=\"",
+      "generation": "1765905029341737",
+      "last_modified": "Tue, 16 Dec 2025 17:10:29 GMT",
+      "goog_hash": "crc32c=EendZg==",
+      "component_count": "32",
+      "accept_ranges": "bytes"
+    },
+    "mode": "from-quarantine",
+    "fingerprint_after": {
+      "content_length": 6928967541,
+      "etag": "\"-CKnE7O/MwpEDEAE=\"",
+      "generation": "1765905029341737",
+      "last_modified": "Tue, 16 Dec 2025 17:10:29 GMT",
+      "goog_hash": "crc32c=EendZg==",
+      "component_count": "32",
+      "accept_ranges": "bytes"
+    },
+    "sha256_local": "376f0bab27d9f22e00dfd888668d3602006d035edc182721c378f4802c77bfe1",
+    "hdf5_root_keys": [
+      "X",
+      "layers",
+      "obs",
+      "obsm",
+      "obsp",
+      "uns",
+      "var",
+      "varm",
+      "varp"
+    ],
+    "anndata_shape": [
+      98927,
+      18080
+    ],
+    "content_gate": "HDF5 opens, root keys=['X', 'layers', 'obs', 'obsm', 'obsp', 'uns']",
+    "manifest_written": true,
+    "file": "data/VCC_validation_h5ad_GCS__adata_Validation.h5ad"
+  }
+]

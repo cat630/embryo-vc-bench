@@ -1,0 +1,2 @@
+overlap_at_N,overlap_at_50,overlap_at_100,overlap_at_200,overlap_at_500,precision_at_N,precision_at_50,precision_at_100,precision_at_200,precision_at_500,de_spearman_sig,de_direction_match,de_spearman_lfc_sig,de_sig_genes_recall,de_nsig_counts_real,de_nsig_counts_pred,pr_auc,roc_auc
+0.5517241379310345,0.5517241379310345,0.5517241379310345,0.5517241379310345,0.5517241379310345,0.8,0.8,0.8,0.8,0.8,NaN,0.962962962962963,NaN,0.7272727272727273,NaN,NaN,NaN,NaN

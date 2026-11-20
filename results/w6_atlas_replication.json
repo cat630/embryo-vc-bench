@@ -1,0 +1,165 @@
+{
+  "schema_version": "w6-orthogonal-v1",
+  "generated_at": "2026-11-18T08:03:21+00:00",
+  "work_package": "W6 orthogonal validation",
+  "registration": "OSF 8tzrq (10.17605/OSF.IO/8TZRQ)",
+  "analysis": "independent-atlas and cross-platform replication audit",
+  "compliance_boundary": {
+    "no_model_loaded": true,
+    "no_new_model_score": true,
+    "no_new_inferential_test": true,
+    "no_new_p_value": true,
+    "no_preregistered_criterion_changed": true,
+    "h2_adjudication_reopened": false,
+    "third_osf_update_required": false,
+    "note": "Descriptive re-stratification of the already-released preregistered score table and audits of existing artefacts only. Registered dataset/model sets, metrics, thresholds, folds and seeds are unchanged."
+  },
+  "independent_atlases": {
+    "n_atlases": 3,
+    "fixed_gene_axis_n": 17555,
+    "fixed_axis_fingerprint": "d4a3402091e00bf7ff7b0035913ecc7949ae5bf270e25221c112735234266e7c",
+    "atlases": [
+      {
+        "atlas": "E-MTAB-3929",
+        "n_cells": 1529,
+        "n_genes_in_fixed_axis": 17555,
+        "genes_detected_in_source": 16512,
+        "gene_axis_coverage_fraction": 0.940587,
+        "gene_identifier_system": "gene SYMBOL",
+        "id_mapping": "symbols used directly",
+        "label_types": [
+          "lineage_counts",
+          "stage_counts"
+        ],
+        "citation": "Petropoulos et al., Cell 2016; E-MTAB-3929",
+        "source_files": [
+          "BS_E-MTAB-3929_counts__counts.txt",
+          "BS_E-MTAB-3929_sdrf__E-MTAB-3929.sdrf.txt"
+        ],
+        "source_sha256": {
+          "BS_E-MTAB-3929_counts__counts.txt": "2e39a0f400b91b1058d6eca5a32dbf6c33a60c3eb41611c1e650183a0d96b35e",
+          "BS_E-MTAB-3929_sdrf__E-MTAB-3929.sdrf.txt": "f9484c3141391e5dd6a54dd97f60c8f6800ff3d0b2b825a8c9ddce8eb33296e4"
+        },
+        "expression_fingerprint": "4b416e1fb84941d9dc6b44368b5226d2624ad0da0f59e5c1cab9d15770f56511"
+      },
+      {
+        "atlas": "GSE66507",
+        "n_cells": 30,
+        "n_genes_in_fixed_axis": 17555,
+        "genes_detected_in_source": 14709,
+        "gene_axis_coverage_fraction": 0.837881,
+        "gene_identifier_system": "Ensembl gene ID",
+        "id_mapping": "Ensembl -> symbol via Geneformer gene_name_id_dict_gc30M.pkl",
+        "label_types": [
+          "lineage_counts",
+          "stage_counts"
+        ],
+        "citation": "Blakeley et al., Development 2015; GSE66507",
+        "source_files": [
+          "GEO_GSE66507_human_blastocyst_rnaseq_counts__GSE66507_human_blastocyst_rnaseq_counts.txt.gz"
+        ],
+        "source_sha256": {
+          "GEO_GSE66507_human_blastocyst_rnaseq_counts__GSE66507_human_blastocyst_rnaseq_counts.txt.gz": "ab822e52cb4aa0056e2135ff4ddf9a3e2451a0af0a739271688a4fa7dc23c4cb"
+        },
+        "expression_fingerprint": "8eea368f19df859d061f864d3ff60ffdbaab6dcaa408ac7d49f948f2ebe2eda6"
+      },
+      {
+        "atlas": "GSE136447",
+        "n_cells": 555,
+        "n_genes_in_fixed_axis": 17555,
+        "genes_detected_in_source": 16840,
+        "gene_axis_coverage_fraction": 0.959271,
+        "gene_identifier_system": "Ensembl|SYMBOL composite",
+        "id_mapping": "suffix after '|' in gene_id",
+        "label_types": [
+          "lineage_counts",
+          "stage_counts"
+        ],
+        "citation": "Xiang et al., Nature 2020; GSE136447",
+        "source_files": [
+          "GEO_GSE136447_555sample_gene_count_matrix__GSE136447_555sample_gene_count_matrix.txt.gz"
+        ],
+        "source_sha256": {
+          "GEO_GSE136447_555sample_gene_count_matrix__GSE136447_555sample_gene_count_matrix.txt.gz": "c701cff79db343edb930c707120985c322cadcc3a9ecabcb45d33079a80b28a1"
+        },
+        "expression_fingerprint": "363622be9906a22e147b0fc8a7de07e03500a7cb5d576c3f00dcdf9ace95eb70"
+      }
+    ],
+    "distinct_gene_identifier_systems": 3,
+    "cross_platform_basis": "Three independently published atlases with three different gene identifier systems (symbols, Ensembl IDs, Ensembl|SYMBOL), different label vocabularies and different source studies, all projected onto one frozen 17,555-gene axis. This is cross-study / cross-platform replication of the DATA LAYER and of the leave-one-atlas-out fold construction; it does NOT constitute >=2 independent perturbational datasets for the H2 falsification criterion (T2/T3 share one VCC study).",
+    "preregistered_fold_count": 5,
+    "observed_distinct_held_out_atlases": 3,
+    "h1_status": "demoted to exploratory under the registration's own rule",
+    "t1_fold_record_from_preflight": {
+      "n_folds": 15,
+      "n_distinct_test_atlases": 3,
+      "min_required": 5,
+      "all_leakage_free": true,
+      "H1_demoted_to_exploratory": true,
+      "tau_available": false
+    }
+  },
+  "t2_cross_atlas_stratification": {
+    "source": "w5_scores.csv",
+    "source_sha256": "397ce31864631c1868a1dfb2ed7421578fb1bd6558c47b81e1b3bd8dbfbf2ed9",
+    "output_csv": "w6_t2_by_heldout_atlas.csv",
+    "output_sha256": "469e59ee918d9586df3adb011daf176ee798b20fa3e2abc36ac69eb2ca17eb7f",
+    "n_rows": 12,
+    "n_held_out_atlases": 3,
+    "seeds_per_atlas_per_method": 5,
+    "descriptive_only": "Mean/sd and paired differences of already-released scores. NO new inferential test, NO p-value, NO new model score, NO change to the H2 adjudication.",
+    "directional_consistency": {
+      "scGPT": {
+        "per_held_out_atlas_delta_vs_no_change": {
+          "E-MTAB-3929": {
+            "DES": 0.056136,
+            "PDS": 0.368393,
+            "MAE": 0.000102,
+            "MAE_z": 0.075158
+          },
+          "GSE136447": {
+            "DES": 0.052045,
+            "PDS": 0.398203,
+            "MAE": 0.0003,
+            "MAE_z": 0.110863
+          },
+          "GSE66507": {
+            "DES": 0.049318,
+            "PDS": 0.315539,
+            "MAE": 0.00017,
+            "MAE_z": 0.087606
+          }
+        },
+        "DES_positive_on_all_3": true,
+        "PDS_positive_on_all_3": true,
+        "MAE_improvement_on_all_3": false
+      },
+      "Geneformer": {
+        "per_held_out_atlas_delta_vs_no_change": {
+          "E-MTAB-3929": {
+            "DES": 0.000455,
+            "PDS": 0.0426,
+            "MAE": 0.0836,
+            "MAE_z": 0.335471
+          },
+          "GSE136447": {
+            "DES": 0.000909,
+            "PDS": -0.045032,
+            "MAE": 0.080326,
+            "MAE_z": 0.352723
+          },
+          "GSE66507": {
+            "DES": 0.003182,
+            "PDS": -0.016385,
+            "MAE": 0.097944,
+            "MAE_z": 0.317685
+          }
+        },
+        "DES_positive_on_all_3": true,
+        "PDS_positive_on_all_3": false,
+        "MAE_improvement_on_all_3": false
+      }
+    }
+  },
+  "status": "COMPUTED - descriptive cross-atlas replication evidence"
+}

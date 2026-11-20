@@ -1,0 +1,153 @@
+{
+  "plan_version": "w5-scoring-plan-1",
+  "status": "FROZEN BEFORE ANY MODEL SCORE; no [[R#]] slot filled",
+  "generated_at": "2026-11-18T04:36:20Z",
+  "gene_axis": {
+    "n_genes": 17555,
+    "fingerprint": "d4a3402091e00bf7ff7b0035913ecc7949ae5bf270e25221c112735234266e7c",
+    "rule": "intersection of ARC gene_names / scGPT vocab / Geneformer V1 tokens"
+  },
+  "adapter_protocol": "w5-adapter-protocol-2 (results/w5_protocol.json)",
+  "targets": {
+    "rule": "the 44 VCC 2025 validation CRISPRi targets, all present in the fixed gene axis",
+    "n_targets": 44,
+    "list": [
+      "ACLY",
+      "ANXA6",
+      "CENPB",
+      "COX4I1",
+      "COX6C",
+      "CSK",
+      "CTSV",
+      "CXCL12",
+      "DOT1L",
+      "DPH2",
+      "EHMT1",
+      "EIF3H",
+      "FUBP1",
+      "GNG12",
+      "GSTZ1",
+      "HDAC3",
+      "HDAC8",
+      "HMGCR",
+      "HMGXB4",
+      "HTATSF1",
+      "ITGAV",
+      "JMJD8",
+      "KLHDC2",
+      "KRT18",
+      "MAT2A",
+      "MAX",
+      "MGST1",
+      "MTFR1",
+      "PACSIN3",
+      "PAXIP1",
+      "PPP2R3C",
+      "SH3BP4",
+      "SLIRP",
+      "SMARCB1",
+      "SMARCE1",
+      "STRAP",
+      "SUPV3L1",
+      "TCF7L2",
+      "THY1",
+      "TUSC3",
+      "UQCRB",
+      "VCL",
+      "WAC",
+      "ZNF598"
+    ],
+    "added_or_removed_after_freeze": false
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "permutations_B": 1000,
+  "bootstrap_B": 2000,
+  "alpha": 0.05,
+  "multiple_testing": "benjamini-hochberg",
+  "de_topk": 20,
+  "metrics": {
+    "MAE": "raw mean absolute error, ALWAYS reported separately; not comparable across methods with different delta scales",
+    "DES": "scale-free, mean top-k overlap (framework-internal)",
+    "PDS": "scale-free, normalised cosine rank (framework-internal)",
+    "MAE_z": "MAE after PER-PERTURBATION z-scoring of both matrices; adapter deltas are NOT on a log2FC scale"
+  },
+  "baselines": {
+    "no_change": "mandatory",
+    "train_mean": "mandatory, mean effect across training perturbations",
+    "additive": "NOT APPLICABLE - no combinatorial perturbations exist in the VCC DE tables (W4); missing singles are never imputed"
+  },
+  "hard_rule": "no model score without its mandatory baselines",
+  "T1": {
+    "fold_rule": "leave-one-atlas-out over licence-verified atlases",
+    "n_independent_atlases": 3,
+    "n_distinct_test_atlases": 3,
+    "min_folds_required": 5,
+    "H1_status": "DEMOTED TO EXPLORATORY by the preregistered rule ('If fewer than 5 independent atlases are available, H1 is demoted to exploratory')",
+    "tau_status": "UNAVAILABLE - W3 produced a CPU feasibility prototype only; the preregistered scVI/scANVI shared latent time axis tau has NOT been fitted, so the registered H1 macro-F1 label-transfer test cannot be executed and must not be imputed",
+    "label_harmonisation": {
+      "atlases_with_lineage_labels": [
+        "E-MTAB-3929",
+        "GSE66507"
+      ],
+      "atlases_with_stage_labels": [
+        "E-MTAB-3929",
+        "GSE136447"
+      ],
+      "shared_lineage_classes": [
+        "EPI",
+        "PE",
+        "TE"
+      ],
+      "shared_stage_classes": [
+        "D6",
+        "D7"
+      ]
+    }
+  },
+  "T2": {
+    "ground_truth": "SURROGATE IN-SILICO PERTURBATION, NOT EXPERIMENTAL PERTURBATION: target-gene masking propagated along a co-expression matrix, on log1p(CP10K) expression",
+    "implementation": "row-wise correlation, algebraically identical to make_surrogate_effects (self-tested); avoids the 17,555^2 matrix",
+    "cells": "all QC-passing cells of each atlas; raw counts retained for models"
+  },
+  "T3": {
+    "ground_truth": "real H1 hESC CRISPRi log2_fold_change from the CC0 VCC 2025 validation DE parquet",
+    "model_input": "non-targeting CONTROL cells from the repaired 6.9 GB validation h5ad (generic cell-line context, as preregistered)",
+    "control_pool_size": 64,
+    "control_cells_per_seed": 8,
+    "alignment": "DE tables pivoted onto the fixed 17,555-gene axis; absent (target, feature) rows filled 0.0 with density reported",
+    "de_alignment": {
+      "train": {
+        "n_targets": 146,
+        "n_features_in_table": 12214,
+        "n_shared_features_used": 11502,
+        "features_lost_to_shared_axis": 712,
+        "matrix_shape": [
+          146,
+          11502
+        ],
+        "observed_density": 0.9282822761020716,
+        "missing_cells_filled_with": 0.0
+      },
+      "val": {
+        "n_targets": 44,
+        "n_features_in_table": 11629,
+        "n_shared_features_used": 11502,
+        "features_lost_to_shared_axis": 127,
+        "matrix_shape": [
+          44,
+          11502
+        ],
+        "observed_density": 0.9286566763092585,
+        "missing_cells_filled_with": 0.0
+      }
+    }
+  },
+  "scale_warning": "Neither adapter delta is on a log2FC scale and the two are not on a common scale with each other or with the CRISPRi ground truth. DES/PDS/MAE_z are scale-free; raw MAE is reported separately but is NOT comparable across methods with different delta scales.",
+  "external_metrics": "cell-eval 0.8.2 official metrics are NOT computed here; framework-internal DES/PDS/MAE/MAE_z must never be compared numerically with VCC leaderboard values"
+}

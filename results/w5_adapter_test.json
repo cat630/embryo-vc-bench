@@ -1,0 +1,168 @@
+{
+  "status": "ENGINEERING VERIFICATION - NOT A PREREGISTERED ANALYSIS; NO MODEL SCORE, NO BASELINE COMPARISON, NO P-VALUE, NO RESULT SLOT FILLED",
+  "protocol_version": "w5-adapter-protocol-2",
+  "generated_at": "2026-11-18T03:40:08Z",
+  "seed": 0,
+  "gene_space": {
+    "n_genes": 17555,
+    "fingerprint": "d4a3402091e00bf7ff7b0035913ecc7949ae5bf270e25221c112735234266e7c",
+    "first_genes": [
+      "A1CF",
+      "A2M",
+      "A2ML1",
+      "A3GALT2",
+      "A4GALT"
+    ],
+    "scgpt_tokens_resolved": 17555,
+    "geneformer_tokens_resolved": 17555,
+    "sources": {
+      "arc_gene_names": "ARC_gene_names__gene_names.csv",
+      "n_arc": 18080,
+      "scgpt_vocab": "vocab.json",
+      "n_scgpt_vocab": 60697,
+      "geneformer_token_dict": "token_dictionary_gc30M.pkl",
+      "n_geneformer_tokens": 25426,
+      "geneformer_name_map": "gene_name_id_dict_gc30M.pkl"
+    }
+  },
+  "input": {
+    "atlas": "E-MTAB-3929",
+    "atlas_fingerprint": "4b416e1fb84941d9dc6b44368b5226d2624ad0da0f59e5c1cab9d15770f56511",
+    "n_cells": 4,
+    "cell_indices": [
+      412,
+      781,
+      972,
+      1298
+    ],
+    "counts_sha256": "77568ad7aac59ea4d2c2eaf1fe1386b0ff50adab0c1bc8ef1632fd212ae02302",
+    "counts_dtype": "float32",
+    "targets": [
+      "POU5F1",
+      "NANOG"
+    ],
+    "stage_labels": [
+      "embryonic day 7",
+      "embryonic day 6",
+      "embryonic day 5",
+      "embryonic day 6"
+    ]
+  },
+  "versions": {
+    "torch": "2.15.0",
+    "transformers": "4.46.3",
+    "scgpt": "0.2.4",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "anndata": "0.13.4"
+  },
+  "adapters": {
+    "scGPT": {
+      "embed_shape": [
+        4,
+        512
+      ],
+      "embed_expected_shape": [
+        4,
+        512
+      ],
+      "embed_shape_ok": true,
+      "embed_finite": true,
+      "embed_nonconstant": true,
+      "embed_deterministic_max_abs_diff": 0.0,
+      "delta_shape": [
+        2,
+        17555
+      ],
+      "delta_expected_shape": [
+        2,
+        17555
+      ],
+      "delta_shape_ok": true,
+      "delta_finite": true,
+      "delta_nonzero_rows": 2,
+      "delta_deterministic_max_abs_diff": 0.0,
+      "seconds": 12.11,
+      "embed_sha256": "3e6a27d5501c696eecaf9f3dde355431f9100a0c44add5773fa5f049ee4639c5",
+      "delta_sha256": "a5a37bd9e74ffbada2e3c413ae720e85d2b5e6391e6cb05449196a64638b9ce4",
+      "adapter": {
+        "name": "scGPT",
+        "embedding_dim": 512,
+        "protocol_version": "w5-adapter-protocol-2",
+        "load_seconds": 0.44,
+        "checkpoint_tensors": 163,
+        "loaded_tensors": 162,
+        "missing_keys": [
+          "cls_decoder._decoder.0.weight",
+          "cls_decoder._decoder.0.bias",
+          "cls_decoder._decoder.2.weight",
+          "cls_decoder._decoder.2.bias",
+          "cls_decoder._decoder.3.weight",
+          "cls_decoder._decoder.3.bias",
+          "cls_decoder._decoder.5.weight",
+          "cls_decoder._decoder.5.bias",
+          "cls_decoder.out_layer.weight",
+          "cls_decoder.out_layer.bias"
+        ],
+        "unexpected_keys": [
+          "flag_encoder.weight"
+        ],
+        "disclosure": "cls_decoder (10 tensors) is randomly initialised but never called; flag_encoder.weight is unused; all encoder/transformer/decoder tensors are loaded exactly",
+        "checkpoint_sha256": "6cb5d451ab5c4b33eb673adbe4fddc61d2389df1b89b7651a9fe2e557572b922",
+        "vocab_sha256": "acca93d114ca62c3f0f50debbd23e8c87f0714f4737764454f6b2b13f2e8580f"
+      },
+      "PASS": true
+    },
+    "Geneformer": {
+      "embed_shape": [
+        4,
+        256
+      ],
+      "embed_expected_shape": [
+        4,
+        256
+      ],
+      "embed_shape_ok": true,
+      "embed_finite": true,
+      "embed_nonconstant": true,
+      "embed_deterministic_max_abs_diff": 0.0,
+      "delta_shape": [
+        2,
+        17555
+      ],
+      "delta_expected_shape": [
+        2,
+        17555
+      ],
+      "delta_shape_ok": true,
+      "delta_finite": true,
+      "delta_nonzero_rows": 2,
+      "delta_deterministic_max_abs_diff": 0.0,
+      "seconds": 7.3,
+      "embed_sha256": "13425ee2a59d4ddcfd6751b66020487685522ff326fd0b6382744acaa3df2602",
+      "delta_sha256": "384b912015339534e4a06e5cb830e640f5fdc69a1328830bacbbade8fc891cf5",
+      "adapter": {
+        "name": "Geneformer",
+        "embedding_dim": 256,
+        "protocol_version": "w5-adapter-protocol-2",
+        "load_seconds": 0.79,
+        "checkpoint": "models\\Geneformer\\Geneformer-V1-10M",
+        "n_tokens": 25426,
+        "gene_embedding_shape": [
+          17555,
+          256
+        ],
+        "checkpoint_sha256": "a5e33a757431643b3697de7ef6127950cdc49e06e58d4266b3a3ab191b683f14"
+      },
+      "PASS": true
+    }
+  },
+  "all_pass": true,
+  "models_evaluated": [
+    "Geneformer",
+    "scGPT"
+  ],
+  "preregistered_model_set_complete": true,
+  "wall_clock_seconds": 22.59,
+  "declaration": "Embedding and delta arrays are written only as SHA256 fingerprints; no biological or performance number from this file may be reported in the manuscript Results."
+}

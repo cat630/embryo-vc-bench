@@ -1,0 +1,108 @@
+{
+  "status": "TECHNICAL FEASIBILITY PROTOTYPE - NOT A PREREGISTERED ANALYSIS",
+  "warning": "No value in this file may be reported as a biological or benchmark result. Arbitrary subset, arbitrary epoch count.",
+  "generated_utc": "2026-11-17T15:32:14+00:00",
+  "input_file": "data\\BS_E-MTAB-3929_counts__counts.txt",
+  "full_matrix_shape_genes_x_cells": [
+    26178,
+    1529
+  ],
+  "subset_genes": 2000,
+  "subset_cells": 500,
+  "epochs": 5,
+  "n_latent": 10,
+  "seed": 0,
+  "stages_observed": [
+    "E3.1",
+    "E3.2",
+    "E3.3",
+    "E3.4",
+    "E4.1",
+    "E4.2",
+    "E4.24_5_0_4",
+    "E4.3",
+    "E4.31_5_1",
+    "E4.4",
+    "E4.5",
+    "E4.6",
+    "E4.7",
+    "E5.1",
+    "E5.2",
+    "E5.3",
+    "E5.5",
+    "E5.6",
+    "E6.1",
+    "E6.13",
+    "E6.2",
+    "E6.3",
+    "E6.4",
+    "E7.16",
+    "E7.17",
+    "E7.2",
+    "E7.3",
+    "E7.4",
+    "E7.5",
+    "E7.6",
+    "E7.7",
+    "E7.8",
+    "E7.9"
+  ],
+  "latent_shape": [
+    500,
+    10
+  ],
+  "latent_mean_abs": 5.07174825668335,
+  "load_seconds": 0.86,
+  "train_seconds": 0.8,
+  "history_tail": {
+    "train_loss": [
+      9231.4541015625,
+      8330.5908203125,
+      7775.87060546875,
+      7401.31005859375,
+      7137.90966796875
+    ],
+    "elbo_train": [
+      9233.7802734375,
+      8334.4052734375,
+      7780.50830078125,
+      7406.65625,
+      7143.89013671875
+    ],
+    "reconstruction_loss_train": [
+      9231.4541015625,
+      8330.58203125,
+      7775.84716796875,
+      7401.26953125,
+      7137.84912109375
+    ],
+    "kl_local_train": [
+      2.326646566390991,
+      3.823108673095703,
+      4.661053657531738,
+      5.386857509613037,
+      6.040826797485352
+    ],
+    "kl_global_train": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "kl_weight": [
+      0.004999999888241291,
+      0.009999999776482582
+    ]
+  },
+  "versions": {
+    "python": "3.13.14",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "anndata": "0.13.4",
+    "scanpy": "1.13.0",
+    "scvi-tools": "1.5.2",
+    "torch": "2.15.0+cpu",
+    "platform": "Windows-11-10.0.26200-SP0"
+  }
+}

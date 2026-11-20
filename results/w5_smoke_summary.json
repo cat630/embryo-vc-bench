@@ -1,0 +1,216 @@
+{
+  "status": "SYNTHETIC-ADAPTER PIPELINE SMOKE TEST - NO MODEL SCORE, NO [[R#]] SLOT FILLED, COMPLIANCE GATE UNCHANGED",
+  "generated_at": "2026-11-18T04:33:02Z",
+  "decision": {
+    "decision": "N/A_SMOKE",
+    "decided_by": "code",
+    "recorded_at": "2026-11-18T04:31:35Z",
+    "rationale": "synthetic-adapter pipeline verification; not a registrant decision"
+  },
+  "audit": {
+    "decision": {
+      "decision": "N/A_SMOKE",
+      "decided_by": "code",
+      "recorded_at": "2026-11-18T04:31:35Z",
+      "rationale": "synthetic-adapter pipeline verification; not a registrant decision"
+    },
+    "protocol_version": "SYNTHETIC_ADAPTER_SMOKE",
+    "started_at": "2026-11-18T04:31:42Z",
+    "models": [
+      "SYNTHETIC_A",
+      "SYNTHETIC_B"
+    ],
+    "n_folds": 15,
+    "errors": [],
+    "smoke": true
+  },
+  "by_task_method": [
+    {
+      "task": "T2_surrogate",
+      "method": "SYNTHETIC_A",
+      "n": 15,
+      "MAE_z_mean": 0.8391122181216446,
+      "MAE_z_sd": 0.031556533785370044,
+      "MAE_z_ci95": [
+        0.8248329568785843,
+        0.8554737703746721
+      ],
+      "DES_mean": 0.015075757575757576,
+      "DES_sd": 0.006701747526833573,
+      "DES_ci95": [
+        0.012045454545454547,
+        0.018484848484848486
+      ],
+      "PDS_mean": 0.4810077519379845,
+      "PDS_sd": 0.023772159249953472,
+      "PDS_ci95": [
+        0.469483791402396,
+        0.4926356589147287
+      ]
+    },
+    {
+      "task": "T2_surrogate",
+      "method": "SYNTHETIC_B",
+      "n": 15,
+      "MAE_z_mean": 0.8391122181119446,
+      "MAE_z_sd": 0.03155653379167565,
+      "MAE_z_ci95": [
+        0.824832956887882,
+        0.8554737704369297
+      ],
+      "DES_mean": 0.015075757575757576,
+      "DES_sd": 0.006701747526833573,
+      "DES_ci95": [
+        0.012045454545454547,
+        0.018484848484848486
+      ],
+      "PDS_mean": 0.48097251585623685,
+      "PDS_sd": 0.023791065867621943,
+      "PDS_ci95": [
+        0.4694476744186046,
+        0.4926013037350248
+      ]
+    },
+    {
+      "task": "T2_surrogate",
+      "method": "no_change",
+      "n": 15,
+      "MAE_z_mean": 0.7524028492508356,
+      "MAE_z_sd": 0.013388096420680827,
+      "MAE_z_ci95": [
+        0.7461400175931456,
+        0.7592385318461938
+      ],
+      "DES_mean": 0.0,
+      "DES_sd": 0.0,
+      "DES_ci95": [
+        0.0,
+        0.0
+      ],
+      "PDS_mean": 0.5,
+      "PDS_sd": 0.0,
+      "PDS_ci95": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "task": "T2_surrogate",
+      "method": "train_mean",
+      "n": 15,
+      "MAE_z_mean": 0.9562485791174994,
+      "MAE_z_sd": 0.00966289123564383,
+      "MAE_z_ci95": [
+        0.951623125185005,
+        0.9608740330499936
+      ],
+      "DES_mean": 0.021212121212121217,
+      "DES_sd": 0.007208352811551665,
+      "DES_ci95": [
+        0.017803030303030307,
+        0.0246969696969697
+      ],
+      "PDS_mean": 0.5,
+      "PDS_sd": 3.317425804434375e-17,
+      "PDS_ci95": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "task": "T3_DE_real",
+      "method": "SYNTHETIC_A",
+      "n": 5,
+      "MAE_z_mean": 0.7378109349846093,
+      "MAE_z_sd": 0.003254497680716336,
+      "MAE_z_ci95": [
+        0.7349282442170629,
+        0.7397233863613237
+      ],
+      "DES_mean": 0.0,
+      "DES_sd": 0.0,
+      "DES_ci95": [
+        0.0,
+        0.0
+      ],
+      "PDS_mean": 0.5085623678646934,
+      "PDS_sd": 0.004151656847073002,
+      "PDS_ci95": [
+        0.5054941860465116,
+        0.5120507399577165
+      ]
+    },
+    {
+      "task": "T3_DE_real",
+      "method": "SYNTHETIC_B",
+      "n": 5,
+      "MAE_z_mean": 0.7378109350647172,
+      "MAE_z_sd": 0.003254497799370028,
+      "MAE_z_ci95": [
+        0.734928244207809,
+        0.7397233865258341
+      ],
+      "DES_mean": 0.0,
+      "DES_sd": 0.0,
+      "DES_ci95": [
+        0.0,
+        0.0
+      ],
+      "PDS_mean": 0.5062367864693446,
+      "PDS_sd": 0.006224680981157441,
+      "PDS_ci95": [
+        0.5017970401691332,
+        0.5116279069767442
+      ]
+    },
+    {
+      "task": "T3_DE_real",
+      "method": "no_change",
+      "n": 5,
+      "MAE_z_mean": 0.5072853574404135,
+      "MAE_z_sd": 0.0,
+      "MAE_z_ci95": [
+        0.5072853574404135,
+        0.5072853574404135
+      ],
+      "DES_mean": 0.0,
+      "DES_sd": 0.0,
+      "DES_ci95": [
+        0.0,
+        0.0
+      ],
+      "PDS_mean": 0.5,
+      "PDS_sd": 0.0,
+      "PDS_ci95": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "task": "T3_DE_real",
+      "method": "train_mean",
+      "n": 5,
+      "MAE_z_mean": 0.8201609625467835,
+      "MAE_z_sd": 0.0,
+      "MAE_z_ci95": [
+        0.8201609625467835,
+        0.8201609625467835
+      ],
+      "DES_mean": 0.08409090909090909,
+      "DES_sd": 0.0,
+      "DES_ci95": [
+        0.08409090909090909,
+        0.08409090909090909
+      ],
+      "PDS_mean": 0.5,
+      "PDS_sd": 0.0,
+      "PDS_ci95": [
+        0.5,
+        0.5
+      ]
+    }
+  ],
+  "h1_status": "demoted to exploratory (3 independent atlases < 5 folds)",
+  "h2_status": "computed from the table above; no conclusion drafted here",
+  "scale_warning": "DES/PDS scale-free; MAE_z is per-perturbation z-scored"
+}

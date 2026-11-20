@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both this release and the OSF preregistration that fixes the analysis plan."
+title: "embryo-vc-bench: a preregistered, zero-wet-lab virtual-cell benchmark for early human embryo atlases"
+abstract: >-
+  A dependency-light evaluation harness testing whether zero-shot single-cell
+  foundation models outperform naive baselines on surrogate in-silico
+  perturbations built from public human preimplantation embryo atlases and on
+  published out-of-domain CRISPRi differential-expression tables. The primary
+  finding is a direction-magnitude dissociation: scale-free directional
+  criteria improve while magnitude error is indistinguishable from the
+  no-change baseline. The shared latent developmental time axis was never
+  fitted; hypotheses H1 and H3 are reported as demoted or unexecutable.
+authors:
+  - family-names: "Zhao"
+    given-names: "Mingpeng"
+    # Name taken from the public OSF contributor record of registration 8tzrq.
+    # CONFIRM spelling, order and any additional co-authors before submission.
+version: "0.1.0-w7-draft"
+date-released: "[[PENDING_RELEASE_DATE]]"
+doi: "[[PENDING_ZENODO_DOI]]"
+url: "[[PENDING_GITHUB_URL]]"
+license: "[[PENDING_CODE_LICENSE]]"
+repository-code: "[[PENDING_GITHUB_URL]]"
+keywords:
+  - "virtual cell"
+  - "single-cell foundation model"
+  - "human preimplantation embryo"
+  - "preregistered benchmark"
+  - "zero-shot evaluation"
+  - "FAIR reproducibility"
+references:
+  - type: generic
+    title: "OSF Secondary Data Preregistration v3, registration 8tzrq"
+    doi: "10.17605/OSF.IO/8TZRQ"
+    url: "https://osf.io/8tzrq/overview"
+    notes: >-
+      Registered 2026-11-17 10:15:47 UTC. Two timestamped approved updates
+      (2026-11-17 14:23:25 UTC and 2026-11-18 05:18:50 UTC) froze the model
+      set and disclosed implementation deviations before the first model score.
+# PUBLICATION-GATE NOTE (not part of CFF): the four bracketed placeholders are
+# deliberately left unfilled. No DOI or repository URL is invented here.
+# Re-run `python w7_release.py --refresh` after filling them.

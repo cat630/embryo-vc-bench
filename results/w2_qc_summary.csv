@@ -1,0 +1,44 @@
+﻿entry_id,accession,kind,licence_status,file,size_bytes,sha256_matches_manifest,format,n_rows,n_cols,delimiter,header_preview,gene_id_type,zero_fraction_sample,note
+GEO_GSE36552_SOFT,GSE36552,provenance_metadata,VERIFIED_POLICY,data/GEO_GSE36552_SOFT__GSE36552_family.soft.gz,10868,True,gzip-delimited-text,5621,1,unknown,^DATABASE = GeoMiame,mixed/unknown,,scanned up to 20000 rows; no filtering applied
+GEO_GSE66507_SOFT,GSE66507,provenance_metadata,VERIFIED_POLICY,data/GEO_GSE66507_SOFT__GSE66507_family.soft.gz,7134,True,gzip-delimited-text,1324,1,unknown,^DATABASE = GeoMiame,mixed/unknown,,scanned up to 20000 rows; no filtering applied
+GEO_GSE44183_SOFT,GSE44183,provenance_metadata,VERIFIED_POLICY,data/GEO_GSE44183_SOFT__GSE44183_family.soft.gz,5209,True,gzip-delimited-text,2178,1,unknown,^DATABASE = GeoMiame,mixed/unknown,,scanned up to 20000 rows; no filtering applied
+GEO_GSE136447_SOFT,GSE136447,provenance_metadata,VERIFIED_POLICY,data/GEO_GSE136447_SOFT__GSE136447_family.soft.gz,41831,True,gzip-delimited-text,20000,1,unknown,^DATABASE = GeoMiame,mixed/unknown,,scanned up to 20000 rows; no filtering applied
+GEO_GSE109555_SOFT,GSE109555,provenance_metadata,VERIFIED_POLICY,data/GEO_GSE109555_SOFT__GSE109555_family.soft.gz,13566,True,gzip-delimited-text,5634,1,unknown,^DATABASE = GeoMiame,mixed/unknown,,scanned up to 20000 rows; no filtering applied
+GEO_GSE150578_SOFT,GSE150578,provenance_metadata,VERIFIED_POLICY,data/GEO_GSE150578_SOFT__GSE150578_family.soft.gz,3966,True,gzip-delimited-text,414,1,unknown,^DATABASE = GeoMiame,mixed/unknown,,scanned up to 20000 rows; no filtering applied
+BS_E-MTAB-3929_record,E-MTAB-3929,provenance_metadata,VERIFIED_POLICY,data/BS_E-MTAB-3929_record__E-MTAB-3929,1533339,True,json,,,n/a,"{
+  ""accno"" : ""E-MTAB-3929"",
+  ""attributes"" : [ {
+    ""name"" : ""Title"",
+    ""value"" : ""Single-cell RNA-seq reveal lineage formation and X-chromosome dosage compensation in human pr",n/a,,metadata / opaque payload; not parsed as a matrix
+BS_E-MTAB-8060_record,E-MTAB-8060,provenance_metadata,VERIFIED_POLICY,data/BS_E-MTAB-8060_record__E-MTAB-8060,14646,True,json,,,n/a,"{
+  ""accno"" : ""E-MTAB-8060"",
+  ""attributes"" : [ {
+    ""name"" : ""Title"",
+    ""value"" : ""Single cell RNA-seq of in vitro cultured human embryos""
+  }, {
+    ""name"" : ""ReleaseDate"",
+  ",n/a,,metadata / opaque payload; not parsed as a matrix
+BS_E-MTAB-9388_record,E-MTAB-9388,provenance_metadata,VERIFIED_POLICY,data/BS_E-MTAB-9388_record__E-MTAB-9388,59681,True,json,,,n/a,"{
+  ""accno"" : ""E-MTAB-9388"",
+  ""attributes"" : [ {
+    ""name"" : ""Title"",
+    ""value"" : ""A spatially resolved single cell atlas of human gastrulation""
+  }, {
+    ""name"" : ""ReleaseDat",n/a,,metadata / opaque payload; not parsed as a matrix
+ENA_PRJEB30442_record,PRJEB30442,provenance_metadata,VERIFIED_POLICY,data/ENA_PRJEB30442_record__PRJEB30442,3308,True,xml,,,n/a,"<PROJECT_SET>
+<PROJECT accession=""PRJEB30442"" alias=""ena-STUDY-INSERM UMR 1064-17-12-2018-18:26:19:290-160"" center_name=""INSERM UMR 1064"">
+  <IDENTIFIERS>
+    <PRIMARY_ID>PRJEB3044",n/a,,metadata / opaque payload; not parsed as a matrix
+BS_E-MTAB-3929_counts,E-MTAB-3929,expression_matrix,VERIFIED_POLICY,data/BS_E-MTAB-3929_counts__counts.txt,100241457,True,delimited-text,20000,1530,tab,	E5.5.101	E5.5.100	E6.2.114	E6.2.104	E6.2.107	E6.2.116	E7.2.138	E6.2.118	E6.2.105	E7.2.144	E6.2.108	E6.2.109	E7.2.148	E7.2.139	E7.2.164	E7.2.152	E7.2.154	E7.2.146	E6.2.117	E7.2.147	E5.2.45	E5.3.54	E5.2.40	E7.2.156	E7.2.142	E7.2.160	E7.2.151	E5.2.38	E7.2.155	E7.2.141	E7.2.162	E7.2.166	E6.2.115	E5.3.4,gene symbol-like,0.6025,scanned up to 20000 rows; no filtering applied
+BS_E-MTAB-3929_ercc_counts,E-MTAB-3929,expression_matrix,VERIFIED_POLICY,data/BS_E-MTAB-3929_ercc_counts__ercc.counts.txt,393692,True,delimited-text,93,1530,tab,	E5.5.101	E5.5.100	E6.2.114	E6.2.104	E6.2.107	E6.2.116	E7.2.138	E6.2.118	E6.2.105	E7.2.144	E6.2.108	E6.2.109	E7.2.148	E7.2.139	E7.2.164	E7.2.152	E7.2.154	E7.2.146	E6.2.117	E7.2.147	E5.2.45	E5.3.54	E5.2.40	E7.2.156	E7.2.142	E7.2.160	E7.2.151	E5.2.38	E7.2.155	E7.2.141	E7.2.162	E7.2.166	E6.2.115	E5.3.4,gene symbol-like,0.7815,scanned up to 20000 rows; no filtering applied
+BS_E-MTAB-3929_sdrf,E-MTAB-3929,provenance_metadata,VERIFIED_POLICY,data/BS_E-MTAB-3929_sdrf__E-MTAB-3929.sdrf.txt,1446272,True,delimited-text,1530,45,tab,Source Name	Comment[ENA_SAMPLE]	Comment[BioSD_SAMPLE]	Characteristics[single cell well quality]	Material Type	Characteristics[cell]	Characteristics[organism]	Characteristics[organism part]	Characteristics[individual]	Characteristics[developmental stage]	Characteristics[treatment]	Characteristics[phe,gene symbol-like,0.0025,scanned up to 20000 rows; no filtering applied
+BS_E-MTAB-3929_idf,E-MTAB-3929,provenance_metadata,VERIFIED_POLICY,data/BS_E-MTAB-3929_idf__E-MTAB-3929.idf.txt,4716,True,delimited-text,72,2,tab,MAGE-TAB Version	1.1,mixed/unknown,0.0,scanned up to 20000 rows; no filtering applied
+GEO_GSE44183_RAW,GSE44183,expression_matrix,VERIFIED_POLICY,data/GEO_GSE44183_RAW__GSE44183_RAW.tar,48660480,True,tar,1,,n/a,GSM1080212_exome.wig.gz,n/a (archive),,1 members; not extracted
+GEO_GSE66507_human_blastocyst_rnaseq_counts,GSE66507,expression_matrix,VERIFIED_POLICY,data/GEO_GSE66507_human_blastocyst_rnaseq_counts__GSE66507_human_blastocyst_rnaseq_counts.txt.gz,953644,True,gzip-delimited-text,20000,31,tab,Gene	TE3.1	TE3.3	TE3.2	TE3.4	EPI3.1	TE3.5	TE8.7	TE8.1	TE8.6	PE8.1	TE8.4	TE8.5	TE8.8	TE8.3	TE8.2	TE9.1	TE3.6	PE5.1	PE5.2	PE5.3	PE5.4	EPI5.1	EPI5.2	EPI6.1	EPI2.1	PE4.1	EPI4.3	TE4.1	EPI4.2	EPI4.1,Ensembl-like (ENSG/ENST),0.398,scanned up to 20000 rows; no filtering applied
+GEO_GSE109555_RAW,GSE109555,expression_matrix,VERIFIED_POLICY,data/GEO_GSE109555_RAW__GSE109555_RAW.tar,194560,True,tar,125,,n/a,GSM2946193_ha_170710A.txt.gz; GSM2946194_ha_170710B.txt.gz; GSM2946195_ha_170710C.txt.gz; GSM2946196_ha_170710D.txt.gz; GSM2946197_ha_170710E.txt.gz,n/a (archive),,125 members; not extracted
+ARC_gene_names,ARC-VCC-2025,provenance_metadata,VERIFIED_CC0,data/ARC_gene_names__gene_names.csv,116023,True,delimited-text,18080,1,unknown,SAMD11,gene symbol-like,,scanned up to 20000 rows; no filtering applied
+ARC_pert_counts_train,ARC-VCC-2025,provenance_metadata,VERIFIED_CC0,data/ARC_pert_counts_train__pert_counts_Training.csv,2824,True,delimited-text,151,3,comma,"target_gene,n_cells,median_umi_per_cell",gene symbol-like,0.0,scanned up to 20000 rows; no filtering applied
+ARC_pert_counts_validation,ARC-VCC-2025,provenance_metadata,VERIFIED_CC0,data/ARC_pert_counts_validation__pert_counts_Validation.csv,978,True,delimited-text,51,3,comma,"target_gene,n_cells,median_umi_per_cell",gene symbol-like,0.0,scanned up to 20000 rows; no filtering applied
+ARC_pert_counts_test,ARC-VCC-2025,provenance_metadata,VERIFIED_CC0,data/ARC_pert_counts_test__pert_counts_Test.csv,1894,True,delimited-text,101,3,comma,"target_gene,n_cells,median_umi_per_cell",gene symbol-like,0.0,scanned up to 20000 rows; no filtering applied
+VCC_competition_train_DE_parquet,ARC-VCC-2025,perturbation_table,VERIFIED_CC0,data/VCC_competition_train_DE_parquet__competition_train.parquet,58843299,True,parquet,1566978,10,n/a,"target, feature, target_mean, ref_mean, target_ncells, ref_ncells, log2_fold_change, p_value, Ueffect, p_adj",n/a (DE table),,"13 row group(s); columns read from Arrow schema, no expression values inspected"
+VCC_competition_val_DE_parquet,ARC-VCC-2025,perturbation_table,VERIFIED_CC0,data/VCC_competition_val_DE_parquet__competition_val.parquet,17666177,True,parquet,472187,10,n/a,"target, feature, target_mean, ref_mean, target_ncells, ref_ncells, log2_fold_change, p_value, Ueffect, p_adj",n/a (DE table),,"4 row group(s); columns read from Arrow schema, no expression values inspected"

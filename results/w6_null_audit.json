@@ -1,0 +1,211 @@
+{
+  "schema_version": "w6-orthogonal-v1",
+  "generated_at": "2026-11-18T08:03:21+00:00",
+  "work_package": "W6 orthogonal validation",
+  "registration": "OSF 8tzrq (10.17605/OSF.IO/8TZRQ)",
+  "analysis": "permutation-null and direction-magnitude audit",
+  "compliance_boundary": {
+    "no_model_loaded": true,
+    "no_new_model_score": true,
+    "no_new_inferential_test": true,
+    "no_new_p_value": true,
+    "no_preregistered_criterion_changed": true,
+    "h2_adjudication_reopened": false,
+    "third_osf_update_required": false,
+    "note": "Descriptive re-stratification of the already-released preregistered score table and audits of existing artefacts only. Registered dataset/model sets, metrics, thresholds, folds and seeds are unchanged."
+  },
+  "permutation_null": {
+    "registered_B": 1000,
+    "pvalue_formula": "(count(null >= observed) + 1) / (B + 1)",
+    "min_observed_p": 0.000999000999000999,
+    "B_recovered_from_min_p": 1000,
+    "n_rows": 80,
+    "n_raw_pvalues": 160,
+    "distinct_p_adj_DES": [
+      0.003996,
+      0.15984,
+      0.293706,
+      0.295704,
+      0.487512,
+      0.581419,
+      0.615385,
+      0.853147,
+      0.949051,
+      1.0
+    ],
+    "distinct_p_adj_PDS": [
+      0.003996,
+      0.00999,
+      0.01998,
+      0.227772,
+      0.257742,
+      0.267732,
+      0.40959,
+      0.825175,
+      0.877123,
+      0.945055,
+      0.999001,
+      1.0
+    ],
+    "bh_family": "BH applied WITHIN each evaluation block across the 4 methods (no_change, train_mean, scGPT, Geneformer), separately for DES and PDS; min p 0.000999 x 4 = 0.003996, matching every p_adj.",
+    "semantic_reminder": "The permutation null shuffles rows of the TRUE-effect matrix. It tests each method's own score against randomly paired rows; it is NOT a paired model-versus-baseline significance test. No paired test was added after scoring.",
+    "source_sha256": "397ce31864631c1868a1dfb2ed7421578fb1bd6558c47b81e1b3bd8dbfbf2ed9"
+  },
+  "null_anchor": {
+    "no_change_baseline": {
+      "T2_surrogate": {
+        "n": 15,
+        "DES_all_zero": true,
+        "PDS_all_half": true,
+        "DES_range": [
+          0.0,
+          0.0
+        ],
+        "PDS_range": [
+          0.5,
+          0.5
+        ]
+      },
+      "T3_DE_real": {
+        "n": 5,
+        "DES_all_zero": true,
+        "PDS_all_half": true,
+        "DES_range": [
+          0.0,
+          0.0
+        ],
+        "PDS_range": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    "additive": "NOT APPLICABLE (zero combinatorial perturbations; never imputed)",
+    "interpretation": "DES = 0 and PDS = 0.5 for no-change provide the exact algebraic floor against which the released model scores were compared."
+  },
+  "direction_magnitude_dissociation": {
+    "description": "Descriptive summary of paired deltas ALREADY reported in manuscript §3.3. Directional criteria (DES, PDS) improve while magnitude criteria (raw MAE, MAE_z) do not. Consistent with zero-shot adapter deltas carrying ranking/direction information but almost no calibrated effect magnitude.",
+    "paired_deltas": {
+      "T2_surrogate/scGPT": {
+        "DES": {
+          "mean_paired_delta_vs_no_change": 0.0525,
+          "min": 0.047727,
+          "max": 0.059091,
+          "n_instances": 15
+        },
+        "PDS": {
+          "mean_paired_delta_vs_no_change": 0.360712,
+          "min": 0.285412,
+          "max": 0.450846,
+          "n_instances": 15
+        },
+        "MAE": {
+          "mean_paired_delta_vs_no_change": 0.000191,
+          "min": 6.9e-05,
+          "max": 0.000354,
+          "n_instances": 15
+        },
+        "MAE_z": {
+          "mean_paired_delta_vs_no_change": 0.091209,
+          "min": 0.066812,
+          "max": 0.123306,
+          "n_instances": 15
+        }
+      },
+      "T2_surrogate/Geneformer": {
+        "DES": {
+          "mean_paired_delta_vs_no_change": 0.001515,
+          "min": 0.0,
+          "max": 0.004545,
+          "n_instances": 15
+        },
+        "PDS": {
+          "mean_paired_delta_vs_no_change": -0.006272,
+          "min": -0.077167,
+          "max": 0.08351,
+          "n_instances": 15
+        },
+        "MAE": {
+          "mean_paired_delta_vs_no_change": 0.08729,
+          "min": 0.065014,
+          "max": 0.11762,
+          "n_instances": 15
+        },
+        "MAE_z": {
+          "mean_paired_delta_vs_no_change": 0.335293,
+          "min": 0.314256,
+          "max": 0.358673,
+          "n_instances": 15
+        }
+      },
+      "T3_DE_real/scGPT": {
+        "DES": {
+          "mean_paired_delta_vs_no_change": 0.051591,
+          "min": 0.048864,
+          "max": 0.054545,
+          "n_instances": 5
+        },
+        "PDS": {
+          "mean_paired_delta_vs_no_change": 0.353805,
+          "min": 0.340909,
+          "max": 0.380021,
+          "n_instances": 5
+        },
+        "MAE": {
+          "mean_paired_delta_vs_no_change": -3.5e-05,
+          "min": -3.9e-05,
+          "max": -3.3e-05,
+          "n_instances": 5
+        },
+        "MAE_z": {
+          "mean_paired_delta_vs_no_change": 0.056789,
+          "min": 0.047578,
+          "max": 0.061819,
+          "n_instances": 5
+        }
+      },
+      "T3_DE_real/Geneformer": {
+        "DES": {
+          "mean_paired_delta_vs_no_change": 0.010909,
+          "min": 0.005682,
+          "max": 0.015909,
+          "n_instances": 5
+        },
+        "PDS": {
+          "mean_paired_delta_vs_no_change": 0.013108,
+          "min": 0.002114,
+          "max": 0.034355,
+          "n_instances": 5
+        },
+        "MAE": {
+          "mean_paired_delta_vs_no_change": 0.08201,
+          "min": 0.075824,
+          "max": 0.09052,
+          "n_instances": 5
+        },
+        "MAE_z": {
+          "mean_paired_delta_vs_no_change": 0.472147,
+          "min": 0.470173,
+          "max": 0.474541,
+          "n_instances": 5
+        }
+      }
+    },
+    "no_new_test": true
+  },
+  "registered_constants_checked": {
+    "alpha": 0.05,
+    "n_permutations": 1000,
+    "n_bootstrap": 2000,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "topk": 20,
+    "multiple_testing": "Benjamini-Hochberg"
+  },
+  "status": "COMPUTED - null and dissociation audit, no new test"
+}

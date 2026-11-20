@@ -1,0 +1,226 @@
+{
+  "status": "BASELINE-ONLY CALIBRATION - NOT A MODEL SCORE, NOT A PREREGISTERED HYPOTHESIS TEST, NO H2 CONCLUSION, NO [[R#]] SLOT FILLED",
+  "generated_at": "2026-11-18T04:36:20Z",
+  "no_model_loaded": true,
+  "no_model_score": true,
+  "no_p_value_for_any_preregistered_hypothesis": true,
+  "no_result_slot_filled": true,
+  "gene_space": {
+    "n_genes": 17555,
+    "fingerprint": "d4a3402091e00bf7ff7b0035913ecc7949ae5bf270e25221c112735234266e7c",
+    "first_genes": [
+      "A1CF",
+      "A2M",
+      "A2ML1",
+      "A3GALT2",
+      "A4GALT"
+    ],
+    "scgpt_tokens_resolved": 17555,
+    "geneformer_tokens_resolved": 17555,
+    "sources": {
+      "arc_gene_names": "ARC_gene_names__gene_names.csv",
+      "n_arc": 18080,
+      "scgpt_vocab": "vocab.json",
+      "n_scgpt_vocab": 60697,
+      "geneformer_token_dict": "token_dictionary_gc30M.pkl",
+      "n_geneformer_tokens": 25426,
+      "geneformer_name_map": "gene_name_id_dict_gc30M.pkl"
+    }
+  },
+  "label_harmonisation": {
+    "E-MTAB-3929": {
+      "n_cells": 1529,
+      "lineage_labels_raw": [
+        "epiblast",
+        "primitive endoderm",
+        "trophectoderm"
+      ],
+      "lineage_labels_harmonised": [
+        "EPI",
+        "PE",
+        "TE"
+      ],
+      "lineage_cells_usable": 1096,
+      "stage_labels_raw": [
+        "embryonic day 3",
+        "embryonic day 4",
+        "embryonic day 5",
+        "embryonic day 6",
+        "embryonic day 7"
+      ],
+      "stage_labels_harmonised": [
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7"
+      ],
+      "stage_cells_usable": 1529
+    },
+    "GSE66507": {
+      "n_cells": 30,
+      "lineage_labels_raw": [
+        "EPI",
+        "PE",
+        "TE"
+      ],
+      "lineage_labels_harmonised": [
+        "EPI",
+        "PE",
+        "TE"
+      ],
+      "lineage_cells_usable": 30,
+      "stage_labels_raw": [],
+      "stage_labels_harmonised": [],
+      "stage_cells_usable": 0
+    },
+    "GSE136447": {
+      "n_cells": 555,
+      "lineage_labels_raw": [],
+      "lineage_labels_harmonised": [],
+      "lineage_cells_usable": 0,
+      "stage_labels_raw": [
+        "D10",
+        "D12",
+        "D14",
+        "D6",
+        "D7",
+        "D8",
+        "D9"
+      ],
+      "stage_labels_harmonised": [
+        "D10",
+        "D12",
+        "D14",
+        "D6",
+        "D7",
+        "D8",
+        "D9"
+      ],
+      "stage_cells_usable": 555
+    },
+    "_summary": {
+      "atlases_with_lineage_labels": [
+        "E-MTAB-3929",
+        "GSE66507"
+      ],
+      "atlases_with_stage_labels": [
+        "E-MTAB-3929",
+        "GSE136447"
+      ],
+      "shared_lineage_classes": [
+        "EPI",
+        "PE",
+        "TE"
+      ],
+      "shared_stage_classes": [
+        "D6",
+        "D7"
+      ]
+    }
+  },
+  "de_alignment": {
+    "train": {
+      "n_targets": 146,
+      "n_features_in_table": 12214,
+      "n_shared_features_used": 11502,
+      "features_lost_to_shared_axis": 712,
+      "matrix_shape": [
+        146,
+        11502
+      ],
+      "observed_density": 0.9282822761020716,
+      "missing_cells_filled_with": 0.0
+    },
+    "val": {
+      "n_targets": 44,
+      "n_features_in_table": 11629,
+      "n_shared_features_used": 11502,
+      "features_lost_to_shared_axis": 127,
+      "matrix_shape": [
+        44,
+        11502
+      ],
+      "observed_density": 0.9286566763092585,
+      "missing_cells_filled_with": 0.0
+    }
+  },
+  "t2_surrogate": {
+    "E-MTAB-3929": {
+      "n_cells": 1529,
+      "delta_shape": [
+        44,
+        17555
+      ],
+      "finite": true,
+      "nonzero_rows": 44,
+      "delta_sha256": "0afc1ac29a480a5b8d7242ff4d3406972d54305fd78e1a5a042109af8d9cdaa6"
+    },
+    "GSE66507": {
+      "n_cells": 30,
+      "delta_shape": [
+        44,
+        17555
+      ],
+      "finite": true,
+      "nonzero_rows": 43,
+      "delta_sha256": "13b5843c1a65f1d570247e9b2af0da2014501c48b4dabecda6c563c90c3c79a3"
+    },
+    "GSE136447": {
+      "n_cells": 555,
+      "delta_shape": [
+        44,
+        17555
+      ],
+      "finite": true,
+      "nonzero_rows": 43,
+      "delta_sha256": "39baa2d9ee5071b7520eda26f1762ac70f2d2f895919d52897e6b87cba29e1e3"
+    }
+  },
+  "t1_folds": {
+    "n_folds": 15,
+    "n_distinct_test_atlases": 3,
+    "min_required": 5,
+    "all_leakage_free": true,
+    "H1_demoted_to_exploratory": true,
+    "tau_available": false
+  },
+  "baseline_calibration_summary": {
+    "n_rows": 40,
+    "methods": [
+      "no_change",
+      "train_mean"
+    ],
+    "tasks": [
+      "T2_surrogate",
+      "T3_DE_real"
+    ],
+    "mean_MAE_z_by_task_method": {
+      "T2_surrogate|no_change": 0.7524028492508356,
+      "T2_surrogate|train_mean": 0.9562485791174994,
+      "T3_DE_real|no_change": 0.5072853574404135,
+      "T3_DE_real|train_mean": 0.8201609625467835
+    },
+    "note": "these are BASELINE numbers, not model performance; H2 untested"
+  },
+  "hESC_control_pool": {
+    "file": "w5_t3_control_cells.npz",
+    "n_control_cells": 64,
+    "shape": [
+      64,
+      17555
+    ],
+    "genes_mapped_from_h5ad": 17555,
+    "genes_zero_filled": 0,
+    "finite": true,
+    "nonnegative": true,
+    "sha256": "d420aaf1a5aecac39dc4faf2a7a7cdd5733dc5e8bb8e26393e986e22a836b684",
+    "selection": "numpy default_rng(0), sorted, from obs.target_gene == 'non-targeting'",
+    "note": "raw counts on the fixed gene axis; DATA PREPARATION ONLY, no model run"
+  },
+  "scoring_plan": "w5_scoring_plan.json",
+  "source_sha256": {
+    "VCC_competition_train_DE_parquet__competition_train.parquet": "6a021f3014a7c94d47441b0cd99dcaa6fce99e044c6b4d65fa6cba8b9877b320",
+    "VCC_competition_val_DE_parquet__competition_val.parquet": "7d88608f3e38a29665764bda06dff947de1b2601f4b9a0f999d718e978ef33e1"
+  }
+}

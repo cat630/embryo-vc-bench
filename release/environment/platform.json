@@ -1,0 +1,34 @@
+{
+  "schema_version": "w7-platform-v1",
+  "record_date": "2026-11-18",
+  "note": "Static hardware record. No timestamp field: this file is cited by hash.",
+  "os": "Windows-11-10.0.26200-SP0",
+  "os_release": "Windows 11",
+  "os_build": "10.0.26200",
+  "architecture": "AMD64",
+  "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+  "cpu_logical": 12,
+  "cpu_physical": 8,
+  "ram_total_bytes": 16856768512,
+  "ram_total_gib": 15.7,
+  "ram_available_at_scoring_bytes": 4900000000,
+  "ram_available_at_scoring_note": "Approximately 4.9 GB available when --mode score ran; this is why the W6 full-data ceiling was not executable and a deterministic seed-0 subsample was used.",
+  "gpu": "none used; all model inference was CPU-only",
+  "python": "3.13.14",
+  "python_full": "3.13.14 (main, Jun 11 2026, 04:04:46) [MSC v.1944 64 bit (AMD64)]",
+  "disk_free_at_decision_gb": 161,
+  "two_environments": {
+    "main": {
+      "file": "release/environment/requirements-main.lock.txt",
+      "n_pinned": 110,
+      "sha256": "684e85abc987d2998e7548eeb29f45e8f06484b9c3c53e91225c7ee5aefe6497"
+    },
+    "models": {
+      "file": "release/environment/requirements-models.lock.txt",
+      "n_pinned": 102,
+      "sha256": "d4de15c2e1bb15c5598003792ae26d01dbf1f963ebba855f2ec8205b04ae7699"
+    },
+    "reason": "Installing model dependencies into the main environment downgrades scvi-tools; scgpt==0.2.4 is installed with --no-deps from the official PyPI index only."
+  },
+  "linux_docker_status": "provided as an interoperability aid in environment/Dockerfile; NOT executed or CI-tested, and not the environment in which published numbers were produced"
+}

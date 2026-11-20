@@ -1,0 +1,110 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "#software",
+      "name": "embryo-vc-bench",
+      "alternateName": "A preregistered, zero-wet-lab virtual-cell benchmark for early human embryo atlases",
+      "description": "A dependency-light evaluation harness that tests whether zero-shot single-cell foundation models outperform naive baselines on surrogate in-silico perturbations built from public human preimplantation embryo atlases and on published out-of-domain CRISPRi differential-expression tables. All hypotheses, metrics, folds, seeds and falsification thresholds were preregistered on OSF before analysis. The shared latent developmental time axis was never fitted and is not claimed as a result.",
+      "programmingLanguage": {
+        "@type": "ComputerLanguage",
+        "name": "Python",
+        "version": "3.13.14",
+        "url": "https://www.python.org/"
+      },
+      "runtimePlatform": [
+        "Windows 11 (10.0.26200), AMD64, CPython 3.13.14 - environment in which all published numbers were produced",
+        "Linux via release/environment/Dockerfile - portability aid, NOT CI-tested"
+      ],
+      "codeRepository": "[[PENDING_GITHUB_URL]]",
+      "url": "[[PENDING_GITHUB_URL]]",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Zenodo release DOI",
+        "value": "[[PENDING_ZENODO_DOI]]"
+      },
+      "license": "[[PENDING_CODE_LICENSE]]",
+      "version": "0.1.0-w7-draft",
+      "dateCreated": "2026-11-17",
+      "dateModified": "2026-11-18",
+      "author": {
+        "@type": "Person",
+        "name": "ZHAO Mingpeng"
+      },
+      "isBasedOn": {
+        "@type": "CreativeWork",
+        "name": "OSF Secondary Data Preregistration v3, registration 8tzrq",
+        "identifier": "10.17605/OSF.IO/8TZRQ",
+        "url": "https://osf.io/8tzrq/overview"
+      },
+      "citation": "10.17605/OSF.IO/8TZRQ",
+      "keywords": [
+        "virtual cell",
+        "single-cell foundation model",
+        "human preimplantation embryo",
+        "preregistered benchmark",
+        "zero-shot evaluation",
+        "negative and mixed results",
+        "FAIR reproducibility"
+      ],
+      "hasPart": [
+        "release/figure_source_data/",
+        "release/environment/",
+        "release/reproduce.ipynb",
+        "release/RELEASE_MANIFEST.json"
+      ]
+    },
+    {
+      "@type": "Dataset",
+      "@id": "#scores",
+      "name": "Preregistered T2/T3 model scores, orthogonal validation artefacts and figure source data",
+      "description": "Machine-readable source data for the main figure and tables: 80 preregistered model/baseline score rows, cross-atlas stratification, permutation-null audit, W4 official cell-eval DE-metric alignment and the W6 model-free data-noise ceiling computed from a deterministic seed-0 subsample. Framework-internal DES/PDS/MAE are NOT on a log2FC scale and are not numerically interchangeable with Virtual Cell Challenge leaderboard values.",
+      "creator": {
+        "@type": "Person",
+        "name": "ZHAO Mingpeng"
+      },
+      "license": "[[PENDING_CODE_LICENSE]]",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Zenodo release DOI",
+        "value": "[[PENDING_ZENODO_DOI]]"
+      },
+      "isBasedOn": "https://osf.io/8tzrq/overview",
+      "temporalCoverage": "2026-11-17/2026-11-18",
+      "variableMeasured": [
+        "MAE", "MAE_z", "DES", "PDS",
+        "p_perm_DES", "p_perm_PDS", "p_adj_DES", "p_adj_PDS",
+        "held_out_atlas", "seed", "overlap_at_N", "de_direction_match", "roc_auc"
+      ],
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "name": "w5_scores.csv",
+          "contentUrl": "results/w5_scores.csv",
+          "encodingFormat": "text/csv"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "figure_source_data",
+          "contentUrl": "release/figure_source_data/",
+          "encodingFormat": "text/csv"
+        },
+        {
+          "@type": "DataDownload",
+          "name": "data_manifest.csv",
+          "contentUrl": "data_manifest.csv",
+          "encodingFormat": "text/csv"
+        }
+      ]
+    }
+  ],
+  "pendingFields": [
+    "Replace [[PENDING_GITHUB_URL]] with the public repository URL before submission.",
+    "Replace [[PENDING_ZENODO_DOI]] with the archived Zenodo release DOI before submission.",
+    "Replace [[PENDING_CODE_LICENSE]] with an SPDX identifier after the author chooses the code licence (see LICENSE.md).",
+    "Confirm the author name spelling/order; it is currently taken from the public OSF contributor record.",
+    "This file contains NO invented identifiers. Until the pending fields are filled, manuscript slot [[R9]] must remain a placeholder."
+  ],
+  "conformance": "schema.org SoftwareSourceCode / Dataset, as recommended for Frontiers Technology and Code articles"
+}
