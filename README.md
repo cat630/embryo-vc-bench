@@ -2,10 +2,11 @@
 
 Code and source data accompanying the manuscript (draft, not yet submitted).
 
-> **Status: DRAFT — this is not a published release.** The public repository
-> URL, Zenodo DOI, code licence and release date are deliberately left as
-> explicit `[[PENDING_*]]` placeholders in `release/`. No identifier has been
-> invented.
+> **Status: DRAFT — this is not a published release.** Public repository:
+> `https://github.com/cat630/embryo-vc-bench`. Code licence: **MIT**. Restrictions on non-academic use: **none**.
+> The Zenodo release DOI and the release date remain explicit
+> `[[PENDING_*]]` placeholders in `release/` until a tagged GitHub Release
+> is archived. No identifier has been invented.
 
 ## Layout
 

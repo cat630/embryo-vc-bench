@@ -623,8 +623,7 @@ def build_manifest(plat: dict, figmeta: dict) -> dict:
         "n_files": len(files),
         "files": files,
         "pending_identifiers": [
-            "[[PENDING_GITHUB_URL]]", "[[PENDING_ZENODO_DOI]]",
-            "[[PENDING_RELEASE_DATE]]", "[[PENDING_CODE_LICENSE]]",
+            "[[PENDING_ZENODO_DOI]]", "[[PENDING_RELEASE_DATE]]",
         ],
         "refresh_command": "python w7_release.py --refresh",
     }

@@ -4,10 +4,12 @@ This directory contains the **locally completable** part of W7: environment
 locks, machine-readable figure/table source data, schema.org metadata, a
 read-only replay notebook/script, a FAIR self-check and a SHA256 manifest.
 
-> **This is not yet a published release.** The public repository URL, the
-> Zenodo release DOI and the code licence are deliberately left as explicit
-> `[[PENDING_*]]` placeholders. No identifier has been invented. Manuscript
-> slot `[[R9]]` stays unfilled until they exist.
+> **This is not yet a published release.** The public repository is
+> `https://github.com/cat630/embryo-vc-bench` and the code is licensed **MIT** (restrictions on non-academic
+> use: **none**). The Zenodo release DOI and the release date remain
+> explicit `[[PENDING_*]]` placeholders; no identifier has been invented.
+> Manuscript slot `[[R9]]` stays unfilled until the DOI and the author
+> declarations exist.
 
 ## Layout
 
@@ -31,7 +33,7 @@ release/
 │   └── SOURCE_INDEX.md               provenance, seed, protocol and SHA256 per file
 ├── metadata.jsonld               schema.org SoftwareSourceCode + Dataset
 ├── CITATION.cff                  CFF 1.2.0
-├── LICENSE.md                    ⚠ decision placeholder, NOT a licence
+├── LICENSE.md                    MIT licence; upstream terms and non-academic-use statement
 ├── FAIR_selfcheck.md             FAIR + journal-specific self-assessment
 ├── reproduce.ipynb               read-only replay of main tables/figure
 ├── reproduce.py                  same replay, plain Python (no notebook deps)
@@ -81,14 +83,15 @@ manuscript has already cited the manifest hash, re-sync that citation. The
 `results/w7_release_summary.json` hardware/runtime record is intentionally
 independent of the pending identifiers, so the `[[R7]]` citation stays stable.
 
-## Blocking items that require the author (not automatable here)
+## Blocking items — status updated 20 November 2026
 
-1. **Code licence** — choose MIT / Apache-2.0 / CC0-1.0, replace `LICENSE.md`
-   with the full text, state `"none"` explicitly for non-academic restrictions.
-   See `LICENSE.md`.
-2. **Public repository** — create the GitHub repo, push, fill
-   `[[PENDING_GITHUB_URL]]` in `metadata.jsonld` / `CITATION.cff`.
-3. **Zenodo release DOI** — archive the tagged release, fill
+1. **[DONE] Code licence** — the author chose **MIT**; `LICENSE.md` now holds
+   the full MIT text. Restrictions on non-academic use are stated explicitly
+   as **`"none"`**.
+2. **[DONE] Public repository** — `https://github.com/cat630/embryo-vc-bench` (public, `main`), 95
+   files pushed; the repository placeholder has been replaced in
+   `metadata.jsonld` / `CITATION.cff`.
+3. **[PENDING] Zenodo release DOI** — archive the tagged release, fill
    `[[PENDING_ZENODO_DOI]]` and `[[PENDING_RELEASE_DATE]]`, then run
    `python w7_release.py --refresh`.
 4. **Manuscript `[[R9]]`** — repository URL, DOI, licence, OS, reproduction

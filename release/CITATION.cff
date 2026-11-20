@@ -16,11 +16,13 @@ authors:
     # Name taken from the public OSF contributor record of registration 8tzrq.
     # CONFIRM spelling, order and any additional co-authors before submission.
 version: "0.1.0-w7-draft"
-date-released: "[[PENDING_RELEASE_DATE]]"
-doi: "[[PENDING_ZENODO_DOI]]"
-url: "[[PENDING_GITHUB_URL]]"
-license: "[[PENDING_CODE_LICENSE]]"
-repository-code: "[[PENDING_GITHUB_URL]]"
+# date-released and doi are commented out rather than left as invalid
+# placeholder values: Zenodo parses this file when archiving a Release.
+# Replace with the real release date and concept DOI after minting.
+# [[PENDING_RELEASE_DATE]] [[PENDING_ZENODO_DOI]]
+url: "https://github.com/cat630/embryo-vc-bench"
+license: "MIT"
+repository-code: "https://github.com/cat630/embryo-vc-bench"
 keywords:
   - "virtual cell"
   - "single-cell foundation model"
@@ -37,6 +39,7 @@ references:
       Registered 2026-11-17 10:15:47 UTC. Two timestamped approved updates
       (2026-11-17 14:23:25 UTC and 2026-11-18 05:18:50 UTC) froze the model
       set and disclosed implementation deviations before the first model score.
-# PUBLICATION-GATE NOTE (not part of CFF): the four bracketed placeholders are
-# deliberately left unfilled. No DOI or repository URL is invented here.
+# PUBLICATION-GATE NOTE (not part of CFF): repository URL and SPDX licence
+# are filled (author chose MIT on 20 November 2026). The Zenodo DOI and the
+# release date are explicitly pending; no identifier has been invented.
 # Re-run `python w7_release.py --refresh` after filling them.

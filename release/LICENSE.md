@@ -1,32 +1,45 @@
-# ⚠️ NOT YET A LICENCE — AUTHOR DECISION REQUIRED
+# MIT Licence — embryo-vc-bench
 
-This file is a **placeholder**, not a grant of rights. No code licence has been
-chosen by the author. Publishing this repository without replacing this file
-with a real licence text would leave the code legally unusable by third parties
-and would fail the Reusable criterion of the FAIR self-check.
+**SPDX identifier:** `MIT`
+**Restrictions on non-academic use: none.** The authors impose no additional
+field-of-use restriction beyond the MIT terms below; commercial and
+non-academic reuse are permitted under those terms.
 
-## What must be decided
+> Author-name note: the copyright holder below is taken from the public OSF
+> contributor record of registration `8tzrq` (`ZHAO Mingpeng`). Confirm the
+> spelling, order and any additional copyright holders before submission.
 
-Choose one SPDX identifier, write the matching full licence text into this
-file (rename to `LICENSE` if the repository convention requires), and replace
-`[[PENDING_CODE_LICENSE]]` in `metadata.jsonld`, `CITATION.cff` and the
-manuscript's Code availability / Declarations sections.
+---
 
-| Option | SPDX | Consequence for this article |
-|---|---|---|
-| MIT | `MIT` | Permissive, simplest; compatible with both upstream model licences. Recommended if no institutional policy dictates otherwise. |
-| Apache-2.0 | `Apache-2.0` | Permissive with an explicit patent grant; matches the Geneformer upstream licence. |
-| CC0-1.0 | `CC0-1.0` | Public-domain dedication; strongest reuse, but some institutions prefer a copyright-bearing licence for software. |
+MIT License
 
-**Restrictions on non-academic use:** none is currently intended, but this is
-an author decision. Frontiers requires the statement to be explicit — write
-`"none"` rather than leaving it blank. It belongs in the README project-link
-section and the manuscript Declarations.
+Copyright (c) 2026 Mingpeng Zhao
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
 
 ## Upstream licences are separate and must NOT be overridden
 
-The code licence applies only to the repository's own source. It cannot
-relicense the data or model weights:
+The MIT licence above applies only to the original source code and
+documentation written for this repository. It does not relicense the data or
+the model weights:
 
 | Manifest | Rows | Verified | Excluded / pending |
 |---|---|---|---|
@@ -49,5 +62,13 @@ per-file SHA256 in `model_manifest.csv`.
 
 Frontiers requires generative-AI use in writing or code development to be
 disclosed in the manuscript. This is an author statement and is **not**
-supplied by this repository. The `[[R9]]` slot remains unfilled until it is
-provided.
+supplied by this repository. The manuscript `[[R9]]` slot remains unfilled
+until it is provided.
+
+## Frozen evidence snapshot
+
+`results/w7_release_summary.json` is a byte-frozen 18 November 2026 record
+whose SHA256 is cited in manuscript section 3.6. Its
+`pending_author_actions` checklist is a historical snapshot of that date and
+is deliberately **not** rewritten when identifiers are filled, so the cited
+hash stays valid. Current status is documented in `release/README.md`.

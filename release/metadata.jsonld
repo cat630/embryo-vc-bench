@@ -17,14 +17,14 @@
         "Windows 11 (10.0.26200), AMD64, CPython 3.13.14 - environment in which all published numbers were produced",
         "Linux via release/environment/Dockerfile - portability aid, NOT CI-tested"
       ],
-      "codeRepository": "[[PENDING_GITHUB_URL]]",
-      "url": "[[PENDING_GITHUB_URL]]",
+      "codeRepository": "https://github.com/cat630/embryo-vc-bench",
+      "url": "https://github.com/cat630/embryo-vc-bench",
       "identifier": {
         "@type": "PropertyValue",
         "propertyID": "Zenodo release DOI",
         "value": "[[PENDING_ZENODO_DOI]]"
       },
-      "license": "[[PENDING_CODE_LICENSE]]",
+      "license": "MIT",
       "version": "0.1.0-w7-draft",
       "dateCreated": "2026-11-17",
       "dateModified": "2026-11-18",
@@ -64,7 +64,7 @@
         "@type": "Person",
         "name": "ZHAO Mingpeng"
       },
-      "license": "[[PENDING_CODE_LICENSE]]",
+      "license": "MIT",
       "identifier": {
         "@type": "PropertyValue",
         "propertyID": "Zenodo release DOI",
@@ -100,11 +100,9 @@
     }
   ],
   "pendingFields": [
-    "Replace [[PENDING_GITHUB_URL]] with the public repository URL before submission.",
-    "Replace [[PENDING_ZENODO_DOI]] with the archived Zenodo release DOI before submission.",
-    "Replace [[PENDING_CODE_LICENSE]] with an SPDX identifier after the author chooses the code licence (see LICENSE.md).",
+    "Replace [[PENDING_ZENODO_DOI]] with the archived Zenodo concept DOI after the tagged GitHub Release is published.",
     "Confirm the author name spelling/order; it is currently taken from the public OSF contributor record.",
-    "This file contains NO invented identifiers. Until the pending fields are filled, manuscript slot [[R9]] must remain a placeholder."
+    "Manuscript slot [[R9]] stays a placeholder until the Zenodo DOI and the author declarations (CRediT, funding, generative-AI disclosure, COI choice) are supplied."
   ],
   "conformance": "schema.org SoftwareSourceCode / Dataset, as recommended for Frontiers Technology and Code articles"
 }
