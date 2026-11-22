@@ -1,0 +1,582 @@
+{
+  "status": "POST_HOC_EXPLORATORY_SENSITIVITY_ANALYSIS - NOT PREREGISTERED; NOT A HYPOTHESIS TEST; NO P-VALUE; NOT USED FOR H2 ADJUDICATION; NO PUBLISHED SCORE, [[R#]] SLOT OR REGISTERED CRITERION CHANGED",
+  "work_package": "W8_post_hoc_negative_controls",
+  "generated_at_utc": "2026-11-20T07:04:24.833299+00:00",
+  "elapsed_seconds": 915.8,
+  "compliance": {
+    "preregistered": false,
+    "performed_after_preregistered_run": "2026-11-18T06:36:10Z",
+    "no_p_value": true,
+    "no_inferential_test": true,
+    "no_bh_correction": true,
+    "descriptive_only": true,
+    "h2_adjudication_unchanged": "not confirmed as a uniform null; partial evidence against; NOT formally falsified",
+    "published_files_untouched": [
+      "w5_scores.csv",
+      "w5_score_summary.json",
+      "virtual-cell-benchmark-manuscript-v0.md",
+      "virtual-cell-benchmark-proposal-v1.md",
+      "embryo-vc-bench/README.md",
+      "osf-preregistration-draft.md"
+    ],
+    "osf_update_required": false,
+    "osf_update_rationale": "A post hoc sensitivity analysis does not modify the registered analysis plan, hypotheses, falsification criteria, seeds or published scores. If reported, it must be explicitly labelled exploratory and kept separate from the preregistered Results."
+  },
+  "design": {
+    "frozen_block": "T3_DE_real / seed 0 / VCC validation DE truth",
+    "n_real_targets": 44,
+    "n_shared_features": 11502,
+    "n_gene_axis": 17555,
+    "topk": 20,
+    "protocol_version": "w5-adapter-protocol-2",
+    "n_shuffle_replicates": 20,
+    "random_target_seeds": {
+      "scGPT": [
+        0,
+        1,
+        2
+      ],
+      "Geneformer": [
+        0
+      ]
+    },
+    "matching": "non-target genes matched to the 44 real targets by control-cell mean-expression quartile",
+    "conditions": {
+      "A_REPLICATION": "real targets, real delta (replication anchor)",
+      "B_RANDOM_TARGET": "expression-matched random non-target genes",
+      "C_TARGET_SHUFFLE": "real delta, 44 rows permuted (pairing broken)",
+      "D_FEATURE_SHUFFLE": "real delta, feature columns permuted (gene identity broken)"
+    }
+  },
+  "input_sha256": {
+    "w5_scores.csv": "397ce31864631c1868a1dfb2ed7421578fb1bd6558c47b81e1b3bd8dbfbf2ed9",
+    "w5_shared_features.json": "d575af42764805b348ab5e6d5e289a57af25c7a55a0947dc25dac05ab78d1ad3",
+    "w5_t3_control_cells.npz": "d420aaf1a5aecac39dc4faf2a7a7cdd5733dc5e8bb8e26393e986e22a836b684",
+    "VCC_competition_train_DE_parquet__competition_train.parquet": "6a021f3014a7c94d47441b0cd99dcaa6fce99e044c6b4d65fa6cba8b9877b320",
+    "VCC_competition_val_DE_parquet__competition_val.parquet": "7d88608f3e38a29665764bda06dff947de1b2601f4b9a0f999d718e978ef33e1"
+  },
+  "replication": {
+    "result": "PASS",
+    "max_abs_diff": 0.0,
+    "detail": {
+      "no_change": {
+        "MAE": {
+          "recomputed": 0.09648897481634545,
+          "published": 0.09648897481634545,
+          "abs_diff": 0.0
+        },
+        "MAE_z": {
+          "recomputed": 0.5072853574404135,
+          "published": 0.5072853574404135,
+          "abs_diff": 0.0
+        },
+        "DES": {
+          "recomputed": 0.0,
+          "published": 0.0,
+          "abs_diff": 0.0
+        },
+        "PDS": {
+          "recomputed": 0.5,
+          "published": 0.5,
+          "abs_diff": 0.0
+        }
+      },
+      "train_mean": {
+        "MAE": {
+          "recomputed": 0.10322967966683556,
+          "published": 0.10322967966683556,
+          "abs_diff": 0.0
+        },
+        "MAE_z": {
+          "recomputed": 0.8201609625467835,
+          "published": 0.8201609625467835,
+          "abs_diff": 0.0
+        },
+        "DES": {
+          "recomputed": 0.08409090909090909,
+          "published": 0.08409090909090909,
+          "abs_diff": 0.0
+        },
+        "PDS": {
+          "recomputed": 0.5,
+          "published": 0.5,
+          "abs_diff": 0.0
+        }
+      },
+      "scGPT": {
+        "MAE": {
+          "recomputed": 0.09645432867331288,
+          "published": 0.09645432867331288,
+          "abs_diff": 0.0
+        },
+        "MAE_z": {
+          "recomputed": 0.554863676248543,
+          "published": 0.554863676248543,
+          "abs_diff": 0.0
+        },
+        "DES": {
+          "recomputed": 0.0534090909090909,
+          "published": 0.0534090909090909,
+          "abs_diff": 0.0
+        },
+        "PDS": {
+          "recomputed": 0.8636363636363636,
+          "published": 0.8636363636363636,
+          "abs_diff": 0.0
+        }
+      },
+      "Geneformer": {
+        "MAE": {
+          "recomputed": 0.17231339406106808,
+          "published": 0.17231339406106808,
+          "abs_diff": 0.0
+        },
+        "MAE_z": {
+          "recomputed": 0.9812953573669019,
+          "published": 0.9812953573669019,
+          "abs_diff": 0.0
+        },
+        "DES": {
+          "recomputed": 0.010227272727272727,
+          "published": 0.010227272727272727,
+          "abs_diff": 0.0
+        },
+        "PDS": {
+          "recomputed": 0.5063424947145877,
+          "published": 0.5063424947145877,
+          "abs_diff": 0.0
+        }
+      }
+    }
+  },
+  "conditions": {
+    "A_REPLICATION": {
+      "Geneformer": {
+        "MAE": {
+          "mean": 0.17231339406106808,
+          "sd": 0.0,
+          "min": 0.17231339406106808,
+          "max": 0.17231339406106808,
+          "n": 1
+        },
+        "MAE_z": {
+          "mean": 0.9812953573669019,
+          "sd": 0.0,
+          "min": 0.9812953573669019,
+          "max": 0.9812953573669019,
+          "n": 1
+        },
+        "DES": {
+          "mean": 0.010227272727272727,
+          "sd": 0.0,
+          "min": 0.010227272727272727,
+          "max": 0.010227272727272727,
+          "n": 1
+        },
+        "PDS": {
+          "mean": 0.5063424947145877,
+          "sd": 0.0,
+          "min": 0.5063424947145877,
+          "max": 0.5063424947145877,
+          "n": 1
+        }
+      },
+      "no_change": {
+        "MAE": {
+          "mean": 0.09648897481634545,
+          "sd": 0.0,
+          "min": 0.09648897481634545,
+          "max": 0.09648897481634545,
+          "n": 1
+        },
+        "MAE_z": {
+          "mean": 0.5072853574404135,
+          "sd": 0.0,
+          "min": 0.5072853574404135,
+          "max": 0.5072853574404135,
+          "n": 1
+        },
+        "DES": {
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "n": 1
+        },
+        "PDS": {
+          "mean": 0.5,
+          "sd": 0.0,
+          "min": 0.5,
+          "max": 0.5,
+          "n": 1
+        }
+      },
+      "scGPT": {
+        "MAE": {
+          "mean": 0.09645432867331288,
+          "sd": 0.0,
+          "min": 0.09645432867331288,
+          "max": 0.09645432867331288,
+          "n": 1
+        },
+        "MAE_z": {
+          "mean": 0.554863676248543,
+          "sd": 0.0,
+          "min": 0.554863676248543,
+          "max": 0.554863676248543,
+          "n": 1
+        },
+        "DES": {
+          "mean": 0.0534090909090909,
+          "sd": 0.0,
+          "min": 0.0534090909090909,
+          "max": 0.0534090909090909,
+          "n": 1
+        },
+        "PDS": {
+          "mean": 0.8636363636363636,
+          "sd": 0.0,
+          "min": 0.8636363636363636,
+          "max": 0.8636363636363636,
+          "n": 1
+        }
+      },
+      "train_mean": {
+        "MAE": {
+          "mean": 0.10322967966683556,
+          "sd": 0.0,
+          "min": 0.10322967966683556,
+          "max": 0.10322967966683556,
+          "n": 1
+        },
+        "MAE_z": {
+          "mean": 0.8201609625467835,
+          "sd": 0.0,
+          "min": 0.8201609625467835,
+          "max": 0.8201609625467835,
+          "n": 1
+        },
+        "DES": {
+          "mean": 0.08409090909090909,
+          "sd": 0.0,
+          "min": 0.08409090909090909,
+          "max": 0.08409090909090909,
+          "n": 1
+        },
+        "PDS": {
+          "mean": 0.5,
+          "sd": 0.0,
+          "min": 0.5,
+          "max": 0.5,
+          "n": 1
+        }
+      }
+    },
+    "B_RANDOM_TARGET": {
+      "Geneformer": {
+        "MAE": {
+          "mean": 0.17180329030876781,
+          "sd": 0.0,
+          "min": 0.17180329030876781,
+          "max": 0.17180329030876781,
+          "n": 1
+        },
+        "MAE_z": {
+          "mean": 0.982881014912251,
+          "sd": 0.0,
+          "min": 0.982881014912251,
+          "max": 0.982881014912251,
+          "n": 1
+        },
+        "DES": {
+          "mean": 0.004545454545454546,
+          "sd": 0.0,
+          "min": 0.004545454545454546,
+          "max": 0.004545454545454546,
+          "n": 1
+        },
+        "PDS": {
+          "mean": 0.4381606765327696,
+          "sd": 0.0,
+          "min": 0.4381606765327696,
+          "max": 0.4381606765327696,
+          "n": 1
+        }
+      },
+      "scGPT": {
+        "MAE": {
+          "mean": 0.09655759099723109,
+          "sd": 6.4443254517739784e-06,
+          "min": 0.09655017343317564,
+          "max": 0.09656181372297264,
+          "n": 3
+        },
+        "MAE_z": {
+          "mean": 0.5857452477384686,
+          "sd": 0.008370677973168329,
+          "min": 0.5761304654187743,
+          "max": 0.5914100888613788,
+          "n": 3
+        },
+        "DES": {
+          "mean": 0.0015151515151515154,
+          "sd": 0.0006560798513518476,
+          "min": 0.0011363636363636365,
+          "max": 0.002272727272727273,
+          "n": 3
+        },
+        "PDS": {
+          "mean": 0.4693446088794926,
+          "sd": 0.04433449677697835,
+          "min": 0.4217758985200845,
+          "max": 0.5095137420718815,
+          "n": 3
+        }
+      }
+    },
+    "C_TARGET_SHUFFLE": {
+      "Geneformer": {
+        "MAE": {
+          "mean": 0.172524229180964,
+          "sd": 0.00036743714816838416,
+          "min": 0.17194987975055154,
+          "max": 0.17334040418373872,
+          "n": 20
+        },
+        "MAE_z": {
+          "mean": 0.9812814371234604,
+          "sd": 0.0005743055712948438,
+          "min": 0.9802467050134871,
+          "max": 0.9823418969425943,
+          "n": 20
+        },
+        "DES": {
+          "mean": 0.007329545454545455,
+          "sd": 0.0021959210773592093,
+          "min": 0.004545454545454546,
+          "max": 0.011363636363636364,
+          "n": 20
+        },
+        "PDS": {
+          "mean": 0.5010570824524312,
+          "sd": 0.027014174795250485,
+          "min": 0.45771670190274844,
+          "max": 0.5533826638477801,
+          "n": 20
+        }
+      },
+      "scGPT": {
+        "MAE": {
+          "mean": 0.096553827318523,
+          "sd": 3.497608453640004e-06,
+          "min": 0.09654732455431578,
+          "max": 0.09655936109296112,
+          "n": 20
+        },
+        "MAE_z": {
+          "mean": 0.5592526608488567,
+          "sd": 0.0011894591240938313,
+          "min": 0.556918024022608,
+          "max": 0.5612124540300383,
+          "n": 20
+        },
+        "DES": {
+          "mean": 0.004999999999999999,
+          "sd": 0.0019298822272481504,
+          "min": 0.002272727272727273,
+          "max": 0.009090909090909092,
+          "n": 20
+        },
+        "PDS": {
+          "mean": 0.5035412262156449,
+          "sd": 0.03628447117210191,
+          "min": 0.4334038054968287,
+          "max": 0.571353065539112,
+          "n": 20
+        }
+      }
+    },
+    "D_FEATURE_SHUFFLE": {
+      "Geneformer": {
+        "MAE": {
+          "mean": 0.17228882822002428,
+          "sd": 0.0001596155007959401,
+          "min": 0.17197333022212583,
+          "max": 0.17253614971283965,
+          "n": 20
+        },
+        "MAE_z": {
+          "mean": 0.9822478452125532,
+          "sd": 0.0013244254180516714,
+          "min": 0.9798622219665518,
+          "max": 0.9840864529019077,
+          "n": 20
+        },
+        "DES": {
+          "mean": 0.0014204545454545455,
+          "sd": 0.0015145283806340434,
+          "min": 0.0,
+          "max": 0.004545454545454546,
+          "n": 20
+        },
+        "PDS": {
+          "mean": 0.4985729386892178,
+          "sd": 0.012614203856472732,
+          "min": 0.474630021141649,
+          "max": 0.5195560253699788,
+          "n": 20
+        }
+      },
+      "scGPT": {
+        "MAE": {
+          "mean": 0.09657718768592145,
+          "sd": 4.333650741186835e-06,
+          "min": 0.09656867384200761,
+          "max": 0.09658543466034279,
+          "n": 20
+        },
+        "MAE_z": {
+          "mean": 0.5576070849158982,
+          "sd": 0.0003956868473803778,
+          "min": 0.5567775984560484,
+          "max": 0.5581763090188602,
+          "n": 20
+        },
+        "DES": {
+          "mean": 0.0017613636363636366,
+          "sd": 0.001584702520716382,
+          "min": 0.0,
+          "max": 0.005681818181818182,
+          "n": 20
+        },
+        "PDS": {
+          "mean": 0.508985200845666,
+          "sd": 0.042730540558712206,
+          "min": 0.4312896405919663,
+          "max": 0.5930232558139535,
+          "n": 20
+        }
+      }
+    }
+  },
+  "contrasts_vs_replication": {
+    "B_RANDOM_TARGET": {
+      "Geneformer": {
+        "MAE": {
+          "delta_vs_replication": -0.0005101037523002616,
+          "direction_retained": null
+        },
+        "MAE_z": {
+          "delta_vs_replication": 0.0015856575453491173,
+          "direction_retained": null
+        },
+        "DES": {
+          "delta_vs_replication": -0.005681818181818181,
+          "direction_retained": true
+        },
+        "PDS": {
+          "delta_vs_replication": -0.06818181818181812,
+          "direction_retained": false
+        }
+      },
+      "scGPT": {
+        "MAE": {
+          "delta_vs_replication": 0.00010326232391820456,
+          "direction_retained": null
+        },
+        "MAE_z": {
+          "delta_vs_replication": 0.03088157148992554,
+          "direction_retained": null
+        },
+        "DES": {
+          "delta_vs_replication": -0.05189393939393938,
+          "direction_retained": true
+        },
+        "PDS": {
+          "delta_vs_replication": -0.39429175475687106,
+          "direction_retained": false
+        }
+      }
+    },
+    "C_TARGET_SHUFFLE": {
+      "Geneformer": {
+        "MAE": {
+          "delta_vs_replication": 0.00021083511989591908,
+          "direction_retained": null
+        },
+        "MAE_z": {
+          "delta_vs_replication": -1.3920243441489788e-05,
+          "direction_retained": null
+        },
+        "DES": {
+          "delta_vs_replication": -0.0028977272727272723,
+          "direction_retained": true
+        },
+        "PDS": {
+          "delta_vs_replication": -0.005285412262156508,
+          "direction_retained": true
+        }
+      },
+      "scGPT": {
+        "MAE": {
+          "delta_vs_replication": 9.949864521011098e-05,
+          "direction_retained": null
+        },
+        "MAE_z": {
+          "delta_vs_replication": 0.004388984600313672,
+          "direction_retained": null
+        },
+        "DES": {
+          "delta_vs_replication": -0.0484090909090909,
+          "direction_retained": true
+        },
+        "PDS": {
+          "delta_vs_replication": -0.36009513742071875,
+          "direction_retained": true
+        }
+      }
+    },
+    "D_FEATURE_SHUFFLE": {
+      "Geneformer": {
+        "MAE": {
+          "delta_vs_replication": -2.4565841043794334e-05,
+          "direction_retained": null
+        },
+        "MAE_z": {
+          "delta_vs_replication": 0.0009524878456512731,
+          "direction_retained": null
+        },
+        "DES": {
+          "delta_vs_replication": -0.008806818181818181,
+          "direction_retained": true
+        },
+        "PDS": {
+          "delta_vs_replication": -0.007769556025369884,
+          "direction_retained": false
+        }
+      },
+      "scGPT": {
+        "MAE": {
+          "delta_vs_replication": 0.0001228590126085699,
+          "direction_retained": null
+        },
+        "MAE_z": {
+          "delta_vs_replication": 0.0027434086673551183,
+          "direction_retained": null
+        },
+        "DES": {
+          "delta_vs_replication": -0.05164772727272726,
+          "direction_retained": true
+        },
+        "PDS": {
+          "delta_vs_replication": -0.35465116279069764,
+          "direction_retained": true
+        }
+      }
+    }
+  },
+  "output_files": [
+    "w8_negative_controls.csv",
+    "w8_negative_controls_report.md"
+  ]
+}
