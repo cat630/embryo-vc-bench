@@ -83,7 +83,7 @@ manuscript has already cited the manifest hash, re-sync that citation. The
 `results/w7_release_summary.json` hardware/runtime record is intentionally
 independent of the pending identifiers, so the `[[R7]]` citation stays stable.
 
-## Blocking items — status updated 20 November 2026
+## Blocking items — status updated 22 November 2026
 
 1. **[DONE] Code licence** — the author chose **MIT**; `LICENSE.md` now holds
    the full MIT text. Restrictions on non-academic use are stated explicitly
@@ -91,12 +91,17 @@ independent of the pending identifiers, so the `[[R7]]` citation stays stable.
 2. **[DONE] Public repository** — `https://github.com/cat630/embryo-vc-bench` (public, `main`), 95
    files pushed; the repository placeholder has been replaced in
    `metadata.jsonld` / `CITATION.cff`.
-3. **[PENDING] Zenodo release DOI** — archive the tagged release, fill
-   `[[PENDING_ZENODO_DOI]]` and `[[PENDING_RELEASE_DATE]]`, then run
-   `python w7_release.py --refresh`.
+3. **[DONE] Zenodo release DOI** — GitHub Release `v0.1.0` was archived by
+   Zenodo on 2026-11-22: concept DOI `10.5281/zenodo.24433661` (cite this) and version DOI
+   `10.5281/zenodo.24433662`. `date-released` / `doi` are filled in `CITATION.cff` and both
+   identifiers are in `metadata.jsonld`; `python w7_release.py --refresh`
+   regenerated `RELEASE_MANIFEST.json`. The `[[PENDING_*]]` strings that remain
+   inside `results/w7_release_summary.json` are a frozen 18 November evidence
+   snapshot and are deliberately left untouched to keep the `[[R7]]` hash valid.
 4. **Manuscript `[[R9]]`** — repository URL, DOI, licence, OS, reproduction
-   commands, plus CRediT, Funding, generative-AI disclosure and the COI
-   two-way choice (editorial recusal vs standard declaration).
+   commands (the DOI `10.5281/zenodo.24433661` is now available), plus CRediT, Funding,
+   generative-AI disclosure and the COI two-way choice (editorial recusal vs
+   standard declaration). These author-only declarations remain outstanding.
 5. **Manuscript `[[R1]]`** — institutional confirmation of the 21
    `VERIFIED_POLICY` rows in `data_manifest.csv` before Table 1 is filled.
 6. **Reference DOIs** — Crossref / Europe PMC verification of every cited

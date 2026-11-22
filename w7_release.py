@@ -622,9 +622,7 @@ def build_manifest(plat: dict, figmeta: dict) -> dict:
         "note": "This file does not contain its own hash (self-reference loop). Generated PNGs are excluded.",
         "n_files": len(files),
         "files": files,
-        "pending_identifiers": [
-            "[[PENDING_ZENODO_DOI]]", "[[PENDING_RELEASE_DATE]]",
-        ],
+        "pending_identifiers": [],
         "refresh_command": "python w7_release.py --refresh",
     }
     write_if_changed(RELEASE / "RELEASE_MANIFEST.json",

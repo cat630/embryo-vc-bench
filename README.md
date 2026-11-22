@@ -2,11 +2,13 @@
 
 Code and source data accompanying the manuscript (draft, not yet submitted).
 
-> **Status: DRAFT — this is not a published release.** Public repository:
-> `https://github.com/cat630/embryo-vc-bench`. Code licence: **MIT**. Restrictions on non-academic use: **none**.
-> The Zenodo release DOI and the release date remain explicit
-> `[[PENDING_*]]` placeholders in `release/` until a tagged GitHub Release
-> is archived. No identifier has been invented.
+> **Status: DRAFT MANUSCRIPT — a versioned, archived code release exists.**
+> Public repository: `https://github.com/cat630/embryo-vc-bench`. Code licence: **MIT**.
+> Restrictions on non-academic use: **none**. Zenodo concept DOI
+> `10.5281/zenodo.24433661` (cite this); `v0.1.0` version DOI `10.5281/zenodo.24433662`;
+> release date 2026-11-22. The manuscript itself is still a draft and has not been
+> submitted. `[[PENDING_*]]` strings in `results/w7_release_summary.json` are a
+> frozen evidence snapshot, deliberately preserved for hash integrity.
 
 ## Layout
 

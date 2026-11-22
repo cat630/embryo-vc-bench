@@ -1,0 +1,23 @@
+{
+  "title": "embryo-vc-bench: a preregistered, zero-wet-lab virtual-cell benchmark for early human embryo atlases",
+  "description": "Code and source data for a preregistered, zero-wet-lab benchmark of zero-shot single-cell foundation-model representations in early human embryo atlases. Frozen preregistered scores, mandatory naive baselines, permutation nulls, orthogonal validation, a reproducible release bundle and post hoc negative controls are included. No wet-lab experiment was performed; the shared latent developmental time axis was never fitted; H2 is reported as not confirmed as a uniform null, with partial evidence against, and not formally falsified. OSF preregistration: 10.17605/OSF.IO/8TZRQ.",
+  "creators": [
+    {
+      "name": "Zhao, Mingpeng"
+    }
+  ],
+  "license": "mit",
+  "upload_type": "software",
+  "access_right": "open",
+  "version": "0.1.1",
+  "publication_date": "2026-11-22",
+  "keywords": [
+    "virtual cell",
+    "single-cell foundation model",
+    "human preimplantation embryo",
+    "preregistered benchmark",
+    "zero-shot evaluation",
+    "negative and mixed results",
+    "FAIR reproducibility"
+  ]
+}

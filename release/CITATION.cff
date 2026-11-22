@@ -15,11 +15,9 @@ authors:
     given-names: "Mingpeng"
     # Name taken from the public OSF contributor record of registration 8tzrq.
     # CONFIRM spelling, order and any additional co-authors before submission.
-version: "0.1.0-w7-draft"
-# date-released and doi are commented out rather than left as invalid
-# placeholder values: Zenodo parses this file when archiving a Release.
-# Replace with the real release date and concept DOI after minting.
-# [[PENDING_RELEASE_DATE]] [[PENDING_ZENODO_DOI]]
+version: "0.1.1"
+date-released: "2026-11-22"
+doi: "10.5281/zenodo.24433661"
 url: "https://github.com/cat630/embryo-vc-bench"
 license: "MIT"
 repository-code: "https://github.com/cat630/embryo-vc-bench"
@@ -40,6 +38,7 @@ references:
       (2026-11-17 14:23:25 UTC and 2026-11-18 05:18:50 UTC) froze the model
       set and disclosed implementation deviations before the first model score.
 # PUBLICATION-GATE NOTE (not part of CFF): repository URL and SPDX licence
-# are filled (author chose MIT on 20 November 2026). The Zenodo DOI and the
-# release date are explicitly pending; no identifier has been invented.
-# Re-run `python w7_release.py --refresh` after filling them.
+# were filled on 20 November 2026 (author chose MIT). The Zenodo concept DOI
+# 10.5281/zenodo.24433661 and release date 2026-11-22 were filled on 22 November 2026
+# after GitHub Release v0.1.0 was archived (version DOI 10.5281/zenodo.24433662).
+# No identifier was invented. Cite the concept DOI, not a single version.

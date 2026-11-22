@@ -21,13 +21,14 @@
       "url": "https://github.com/cat630/embryo-vc-bench",
       "identifier": {
         "@type": "PropertyValue",
-        "propertyID": "Zenodo release DOI",
-        "value": "[[PENDING_ZENODO_DOI]]"
+        "propertyID": "Zenodo concept DOI",
+        "value": "10.5281/zenodo.24433661"
       },
       "license": "MIT",
-      "version": "0.1.0-w7-draft",
+      "version": "0.1.1",
       "dateCreated": "2026-11-17",
-      "dateModified": "2026-11-18",
+      "datePublished": "2026-11-22",
+      "dateModified": "2026-11-22",
       "author": {
         "@type": "Person",
         "name": "ZHAO Mingpeng"
@@ -67,8 +68,8 @@
       "license": "MIT",
       "identifier": {
         "@type": "PropertyValue",
-        "propertyID": "Zenodo release DOI",
-        "value": "[[PENDING_ZENODO_DOI]]"
+        "propertyID": "Zenodo concept DOI",
+        "value": "10.5281/zenodo.24433661"
       },
       "isBasedOn": "https://osf.io/8tzrq/overview",
       "temporalCoverage": "2026-11-17/2026-11-18",
@@ -100,9 +101,8 @@
     }
   ],
   "pendingFields": [
-    "Replace [[PENDING_ZENODO_DOI]] with the archived Zenodo concept DOI after the tagged GitHub Release is published.",
     "Confirm the author name spelling/order; it is currently taken from the public OSF contributor record.",
-    "Manuscript slot [[R9]] stays a placeholder until the Zenodo DOI and the author declarations (CRediT, funding, generative-AI disclosure, COI choice) are supplied."
+    "Manuscript slot [[R9]] stays a placeholder until the author declarations (CRediT, funding, generative-AI disclosure, COI choice) are supplied; the Zenodo concept DOI 10.5281/zenodo.24433661 is now available."
   ],
   "conformance": "schema.org SoftwareSourceCode / Dataset, as recommended for Frontiers Technology and Code articles"
 }
